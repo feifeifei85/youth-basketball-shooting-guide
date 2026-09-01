@@ -1,0 +1,6222 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>青少年投篮技术训练手册</title>
+  <meta content="青少年投篮技术与训练手册" name="description">
+  <meta content="#10253f" name="theme-color">
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%2310253f'/%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%23e86b2d' stroke-width='2'/%3E%3Cpath d='M8 12c5 2 11 2 16 0M8 20c5-2 11-2 16 0' fill='none' stroke='%23e86b2d' stroke-width='2'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --navy: #13213c;
+      --orange: #f26b21;
+      --orange-dark: #d95412;
+      --pale-orange: #fff1e7;
+      --pale-blue: #eaf1f6;
+      --pale-gray: #f4f6f8;
+      --mid: #5f6975;
+      --dark: #18212b;
+      --red: #b64031;
+      --pale-red: #fbece9;
+      --line: #cbd3db;
+      --manual-fs-page-title: 29pt;
+      --manual-fs-page-deck: 9.5pt;
+      --manual-fs-section-tab: 9.25pt;
+      --manual-fs-card-title: 10pt;
+      --manual-fs-body: 8pt;
+      --manual-fs-caption: 7.25pt;
+      --manual-fs-keyword: 10.5pt;
+      --manual-fs-folio: 6.75pt;
+      --manual-fs-reference: 6.6pt;
+      --manual-fs-feature-title: 13pt;
+      --manual-fs-body-large: 8.75pt;
+      --manual-fs-caption-strong: 9.25pt;
+      --manual-fs-symbol-small: 5.5pt;
+      --manual-fs-step-display: 22pt;
+      --manual-lh-tight: 1.15;
+      --manual-lh-body: 1.4;
+      --manual-lh-caption: 1.25;
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html {
+      background: #d9dfe7;
+      scroll-behavior: smooth
+    }
+
+    body {
+      margin: 0;
+      color: var(--dark);
+      font-family: "Noto Sans CJK SC", "Source Han Sans SC", "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact
+    }
+
+    .document {
+      padding: 10mm 0 22mm
+    }
+
+    .page {
+      position: relative;
+      width: 210mm;
+      height: 297mm;
+      margin: 8mm auto;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 4px 20px rgba(15, 30, 50, .16);
+      page-break-after: always;
+      break-after: page
+    }
+
+    .page:last-of-type {
+      page-break-after: auto;
+      break-after: auto
+    }
+
+    .manual-copy {
+      overflow-wrap: anywhere;
+      word-break: break-word
+    }
+
+    svg {
+      display: block;
+      overflow: visible
+    }
+
+    @page {
+      size: A4 portrait;
+      margin: 0
+    }
+
+    @media print {
+
+      html,
+      body {
+        width: 210mm !important;
+        min-width: 210mm !important;
+        background: #fff !important
+      }
+
+      body {
+        margin: 0 !important
+      }
+
+      .document {
+        padding: 0 !important
+      }
+
+      .page {
+        width: 210mm !important;
+        height: 297mm !important;
+        margin: 0 !important;
+        overflow: hidden !important;
+        box-shadow: none !important;
+        page-break-after: always !important;
+        break-after: page !important
+      }
+
+      .page:last-of-type {
+        page-break-after: auto !important;
+        break-after: auto !important
+      }
+
+      .language-switcher {
+        display: none !important
+      }
+
+      img,
+      svg {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact
+      }
+    }
+
+    @media screen and (max-width:900px) {
+      .document {
+        transform-origin: top center
+      }
+
+      .page {
+        margin: 6mm auto
+      }
+    }
+
+    @media screen and (min-width:901px) {
+      .page {
+        margin: 7mm auto
+      }
+    }
+
+    /* ===== 封面：白底赛事手册风格 ===== */
+    .cover {
+      background: #fff;
+      color: var(--navy)
+    }
+
+    .cover-art {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0
+    }
+
+    .cover-court--compact {
+      display: none
+    }
+
+    .cover-illustration {
+      position: absolute;
+      left: 0;
+      top: 12mm;
+      width: 210mm;
+      height: 270mm;
+      object-fit: fill;
+      z-index: 2;
+      pointer-events: none;
+      user-select: none
+    }
+
+    .cover-coach-label {
+      position: absolute;
+      left: 9.5mm;
+      top: 10.5mm;
+      z-index: 3;
+      color: var(--orange);
+      font-size: 14pt;
+      font-weight: 800;
+      letter-spacing: .02em
+    }
+
+    .cover-coach-label:after {
+      content: "";
+      display: block;
+      width: 14mm;
+      margin-top: 2.5mm;
+      border-top: 1.2mm solid var(--orange)
+    }
+
+    .cover-title-block {
+      position: absolute;
+      left: 16mm;
+      top: 40mm;
+      width: 116mm;
+      z-index: 3
+    }
+
+    .cover-title-block h1 {
+      margin: 0;
+      font-family: "Noto Sans CJK SC", "Source Han Sans SC", "Microsoft YaHei", sans-serif;
+      font-size: 50pt;
+      line-height: 1.01;
+      font-weight: 950;
+      letter-spacing: -.06em
+    }
+
+    .cover-title-block h1 span {
+      display: block;
+      white-space: nowrap
+    }
+
+    .cover-title-block h1 .title-orange {
+      color: var(--orange);
+      font-size: 53pt;
+      margin: 1mm 0
+    }
+
+    .cover-title-block .tagline {
+      position: relative;
+      margin-top: 8mm;
+      padding-top: 5mm;
+      font-size: 10.3pt;
+      line-height: 1.45;
+      font-weight: 700;
+      letter-spacing: .025em;
+      white-space: nowrap
+    }
+
+    .cover-title-block .tagline:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 112mm;
+      border-top: 1mm solid var(--orange)
+    }
+
+    .cover-title-block .tagline:after {
+      content: "";
+      position: absolute;
+      left: 110mm;
+      top: -1.35mm;
+      border-left: 3.4mm solid var(--orange);
+      border-top: 1.85mm solid transparent;
+      border-bottom: 1.85mm solid transparent
+    }
+
+    .cover-feature-band {
+      position: absolute;
+      left: 7mm;
+      top: 245mm;
+      width: 92mm;
+      height: 25mm;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      z-index: 4;
+      color: #fff
+    }
+
+    .cover-feature {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-right: .25mm solid rgba(255, 255, 255, .42);
+      font-size: 8.5pt;
+      letter-spacing: .08em
+    }
+
+    .cover-feature:last-child {
+      border-right: 0
+    }
+
+    .cover-feature svg {
+      width: 10mm;
+      height: 10mm;
+      margin-bottom: 1.6mm
+    }
+
+    .cover-feature circle,
+    .cover-feature path,
+    .cover-feature rect {
+      vector-effect: non-scaling-stroke
+    }
+
+    .cover-footnote {
+      position: absolute;
+      left: 16mm;
+      bottom: 7mm;
+      color: var(--navy);
+      font-size: 7.6pt;
+      font-weight: 800;
+      letter-spacing: .08em;
+      z-index: 4
+    }
+
+    .cover-small {
+      position: absolute;
+      right: 16mm;
+      bottom: 7mm;
+      color: var(--navy);
+      font-size: 7.6pt;
+      font-weight: 800;
+      letter-spacing: .14em;
+      z-index: 4
+    }
+
+    /* ===== 手册设计系统：页面骨架、基础组件、复合组件 ===== */
+    .manual-page {
+      color: var(--dark);
+      background: linear-gradient(180deg, #fff 0%, #fff 84%, #f7f9fb 100%)
+    }
+
+    .manual-page-title {
+      position: absolute;
+      left: 4mm;
+      right: 4mm;
+      top: 4mm;
+      height: 19mm;
+      border-radius: 4mm;
+      background: var(--navy);
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-size: var(--manual-fs-page-title);
+      line-height: 1;
+      font-weight: 950;
+      letter-spacing: .02em;
+      box-shadow: 0 1.2mm 2.8mm rgba(19, 33, 60, .12)
+    }
+
+    .manual-page-deck {
+      position: absolute;
+      left: 10mm;
+      right: 10mm;
+      top: 26.2mm;
+      text-align: center;
+      color: var(--dark);
+      font-size: var(--manual-fs-page-deck);
+      line-height: var(--manual-lh-body);
+      font-weight: 500
+    }
+
+    .manual-page-deck b {
+      color: var(--navy);
+      font-weight: 900
+    }
+
+    .manual-panel {
+      position: relative;
+      border: .3mm solid var(--navy);
+      border-radius: 3mm;
+      background: #fff;
+      box-shadow: 0 .8mm 2.4mm rgba(19, 33, 60, .06)
+    }
+
+    .manual-tab {
+      position: absolute;
+      left: 5.5mm;
+      height: 6mm;
+      padding: 0 3.4mm;
+      border-radius: 2.2mm 2.2mm 0 0;
+      background: var(--navy);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      font-size: var(--manual-fs-section-tab);
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: .04em;
+      z-index: 3
+    }
+
+    .manual-tab:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -.35mm;
+      width: 100%;
+      height: .45mm;
+      background: var(--navy)
+    }
+
+    .manual-tab-row {
+      display: contents
+    }
+
+    .manual-footer {
+      position: absolute;
+      left: 5.5mm;
+      right: 5.5mm;
+      bottom: 3.5mm;
+      display: flex;
+      justify-content: space-between;
+      color: var(--mid);
+      font-size: var(--manual-fs-folio)
+    }
+
+    .manual-author {
+      font-weight: 700;
+      letter-spacing: .08em
+    }
+
+    .manual-folio {
+      font-variant-numeric: tabular-nums
+    }
+
+    /* 练习卡公共骨架；列数与尺寸由布局变体控制。 */
+    .manual-practice-head {
+      display: flex;
+      align-items: center;
+      gap: 2mm
+    }
+
+    .manual-practice-number {
+      width: 7mm;
+      height: 7mm;
+      border-radius: 50%;
+      background: var(--navy);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-size: var(--manual-fs-body);
+      font-weight: 900
+    }
+
+    .manual-practice-card h3 {
+      margin: 0;
+      color: var(--navy);
+      font-size: var(--manual-fs-card-title);
+      line-height: var(--manual-lh-tight);
+      font-weight: 900
+    }
+
+    .manual-practice-goal {
+      margin: 0;
+      padding: 0 1mm;
+      display: flex;
+      align-items: center;
+      background: transparent;
+      color: var(--dark);
+      font-size: var(--manual-fs-body);
+      line-height: 1.2
+    }
+
+    .manual-practice-goal b {
+      flex: 0 0 auto;
+      margin-right: .45em;
+      color: var(--navy)
+    }
+
+    .manual-practice-list li::marker {
+      color: var(--navy)
+    }
+
+    /* 页面总结栏：各页使用同一结构与同一视觉规则。 */
+    .manual-summary-bar {
+      position: absolute;
+      left: 5.5mm;
+      right: 5.5mm;
+      top: 262.5mm;
+      height: 21mm;
+      border: .25mm solid var(--line);
+      border-radius: 2.5mm;
+      background: linear-gradient(90deg, var(--pale-orange), #fff);
+      display: grid;
+      grid-template-columns: 12mm 47mm 1fr;
+      align-items: center;
+      padding: 2mm 3mm;
+      column-gap: 2mm
+    }
+
+    .manual-summary-bar>.manual-idea-icon {
+      position: relative;
+      left: auto;
+      top: auto;
+      width: 9mm;
+      height: 9mm;
+      background: var(--orange)
+    }
+
+    .manual-summary-bar>b {
+      color: var(--orange-dark);
+      font-size: var(--manual-fs-card-title);
+      font-weight: 900
+    }
+
+    .manual-summary-bar>span {
+      font-size: var(--manual-fs-body);
+      line-height: 1.3
+    }
+
+    .manual-summary-bar--guide {
+      background: linear-gradient(90deg, var(--pale-blue), #fff)
+    }
+
+    .manual-summary-bar--guide>.manual-idea-icon {
+      background: var(--navy)
+    }
+
+    .manual-summary-bar--guide>b {
+      color: var(--navy)
+    }
+
+    /* ===== 导读与训练路径组件 ===== */
+    .manual-page--guide {
+      background: linear-gradient(180deg, #fff 0%, #fff 82%, #f7f9fb 100%)
+    }
+
+    .manual-page--guide .manual-page-deck {
+      position: absolute;
+      left: 10mm;
+      right: 10mm;
+      top: 26.2mm;
+      text-align: center;
+      color: var(--navy);
+      font-size: var(--manual-fs-page-deck);
+      line-height: var(--manual-lh-body);
+      font-weight: 700;
+      letter-spacing: .01em
+    }
+
+    .manual-intro-panel {
+      position: absolute;
+      left: 5.5mm;
+      right: 5.5mm;
+      top: 34.5mm;
+      height: 47mm;
+      padding: 4.5mm 5mm;
+      display: grid;
+      grid-template-columns: 61mm 1fr;
+      grid-template-rows: minmax(0, 1fr);
+      gap: 5mm;
+      overflow: hidden
+    }
+
+    .manual-intro-copy {
+      position: relative;
+      padding: 0 4mm 0 13mm;
+      border-right: .25mm dashed #aeb9c5
+    }
+
+    .manual-idea-icon {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 9.5mm;
+      height: 9.5mm;
+      border-radius: 50%;
+      background: var(--navy);
+      color: #fff;
+      display: grid;
+      place-items: center
+    }
+
+    .manual-idea-icon svg {
+      width: 5.8mm;
+      height: 5.8mm;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round
+    }
+
+    .manual-intro-panel h2 {
+      margin: .7mm 0 2.2mm;
+      color: var(--navy);
+      font-size: var(--manual-fs-feature-title);
+      line-height: var(--manual-lh-tight)
+    }
+
+    .manual-intro-panel p {
+      margin: 0;
+      font-size: var(--manual-fs-body-large);
+      line-height: var(--manual-lh-body);
+      color: var(--dark)
+    }
+
+    .manual-intro-art {
+      position: relative;
+      min-width: 0;
+      min-height: 0;
+      overflow: hidden;
+      border-radius: 1.6mm;
+      background: linear-gradient(135deg, #f4f6f8, #fff);
+      display: grid;
+      place-items: center
+    }
+
+    .manual-art-cover {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center;
+      mix-blend-mode: multiply
+    }
+
+    .manual-art-contain {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      mix-blend-mode: multiply
+    }
+
+    .manual-art-observation {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transform: translateY(2.5mm) scale(.82);
+      transform-origin: center center;
+      mix-blend-mode: multiply
+    }
+
+    .manual-observation-item:nth-child(2) .manual-art-observation {
+      transform: translateY(.5mm) scale(.74)
+    }
+
+    .manual-tab--path {
+      top: 88.5mm
+    }
+
+    .manual-path-grid {
+      position: absolute;
+      left: 5.5mm;
+      right: 5.5mm;
+      top: 94.5mm;
+      height: 55mm;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8mm
+    }
+
+    .manual-path-card {
+      position: relative;
+      padding: 3.7mm 4mm 3mm;
+      overflow: visible
+    }
+
+    .manual-path-card:not(:last-child):after {
+      content: "";
+      position: absolute;
+      right: -7mm;
+      top: 25mm;
+      width: 6mm;
+      height: 4.5mm;
+      background: var(--orange);
+      clip-path: polygon(0 26%, 68% 26%, 68% 0, 100% 50%, 68% 100%, 68% 74%, 0 74%);
+      z-index: 4
+    }
+
+    .manual-path-card:first-child {
+      border-top-left-radius: 0
+    }
+
+    .manual-path-head {
+      display: grid;
+      grid-template-columns: 14mm 1fr;
+      align-items: center
+    }
+
+    .manual-display-number {
+      font-size: var(--manual-fs-step-display);
+      line-height: 1;
+      color: var(--orange);
+      font-weight: 950
+    }
+
+    .manual-path-card h3 {
+      margin: 0;
+      color: var(--navy);
+      font-size: var(--manual-fs-card-title);
+      line-height: var(--manual-lh-tight);
+      font-weight: 800
+    }
+
+    .manual-path-card>.manual-card-lead {
+      height: 11mm;
+      margin: 1.2mm 0 1mm;
+      color: var(--dark);
+      font-size: var(--manual-fs-body);
+      line-height: var(--manual-lh-body)
+    }
+
+    .manual-path-body {
+      height: 25mm;
+      display: grid;
+      grid-template-columns: 29mm 1fr;
+      gap: 2mm;
+      align-items: end
+    }
+
+    .manual-path-art {
+      height: 24mm;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      border-radius: 1.6mm
+    }
+
+    .manual-tick-list {
+      align-self: center;
+      margin: 0;
+      padding: 0;
+      list-style: none
+    }
+
+    .manual-tick-list li {
+      position: relative;
+      padding-left: 5mm;
+      margin: 1.45mm 0;
+      color: var(--dark);
+      font-size: var(--manual-fs-caption-strong);
+      line-height: var(--manual-lh-caption)
+    }
+
+    .manual-tick-list li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: -.1mm;
+      width: 3.6mm;
+      height: 3.6mm;
+      border: .35mm solid var(--navy);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: var(--navy);
+      font-size: var(--manual-fs-symbol-small);
+      font-weight: 900
+    }
+
+    .manual-tab--concept {
+      top: 156.5mm
+    }
+
+    .manual-concept-grid {
+      position: absolute;
+      left: 5.5mm;
+      right: 5.5mm;
+      top: 162.5mm;
+      height: 43mm;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3mm
+    }
+
+    .manual-concept-card {
+      padding: 2.3mm 3.2mm 1.8mm;
+      text-align: center;
+      overflow: hidden
+    }
+
+    .manual-concept-card:first-child {
+      border-top-left-radius: 0
+    }
+
+    .manual-concept-card h3 {
+      margin: 0;
+      color: var(--navy);
+      font-size: var(--manual-fs-card-title);
+      line-height: var(--manual-lh-tight);
+      font-weight: 800
+    }
+
+    .manual-concept-card p {
+      height: 8.2mm;
+      margin: .7mm 0 .1mm;
+      color: var(--mid);
+      font-size: var(--manual-fs-body);
+      line-height: var(--manual-lh-body)
+    }
+
+    .manual-concept-art {
+      height: 22.4mm;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      border-radius: 1.6mm
+    }
+
+    .manual-tab--observation {
+      top: 212.5mm
+    }
+
+    .manual-observation-panel {
+      position: absolute;
+      left: 5.5mm;
+      right: 5.5mm;
+      top: 218.5mm;
+      height: 35mm;
+      padding: 1.5mm 2.5mm;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      border-top-left-radius: 0
+    }
+
+    .manual-observation-item {
+      text-align: center;
+      display: grid;
+      grid-template-rows: 22.5mm 1fr;
+      place-items: center;
+      border-right: .25mm dashed #c4ccd5
+    }
+
+    .manual-observation-item:last-child {
+      border-right: 0
+    }
+
+    .manual-observation-figure {
+      position: relative;
+      width: 22.5mm;
+      height: 22.5mm;
+      border: .3mm solid var(--navy);
+      border-radius: 50%;
+      overflow: hidden;
+      background: #fff;
+      display: grid;
+      place-items: center
+    }
+
+    .manual-observation-key {
+      position: absolute;
+      left: 50%;
+      top: 1mm;
+      z-index: 3;
+      transform: translateX(-50%);
+      min-width: 6mm;
+      padding: 0 .5mm;
+      background: #fff;
+      color: var(--navy);
+      font-size: var(--manual-fs-keyword);
+      line-height: 1;
+      font-weight: 950;
+      text-align: center;
+      white-space: nowrap
+    }
+
+    .manual-observation-item p {
+      margin: .55mm 0 0;
+      color: var(--dark);
+      font-size: var(--manual-fs-caption-strong);
+      line-height: var(--manual-lh-tight);
+      font-weight: 700
+    }
+
+    .manual-guide-summary {
+      position: absolute;
+      left: 5.5mm;
+      right: 5.5mm;
+      top: 262.5mm;
+      height: 21mm;
+      border: .25mm solid var(--line);
+      border-radius: 2.5mm;
+      background: linear-gradient(90deg, var(--pale-blue), #fff);
+      display: grid;
+      grid-template-columns: 11mm 91mm 1fr;
+      align-items: center;
+      gap: 2.2mm;
+      padding: 2mm 3.2mm
+    }
+
+    .manual-guide-summary .manual-idea-icon {
+      position: relative;
+      left: auto;
+      top: auto;
+      width: 9mm;
+      height: 9mm
+    }
+
+    .manual-guide-summary-copy {
+      font-size: var(--manual-fs-caption-strong);
+      line-height: var(--manual-lh-caption)
+    }
+
+    .manual-guide-summary-copy b {
+      font-size: var(--manual-fs-section-tab);
+      color: var(--navy);
+      margin-right: 2.2mm
+    }
+
+    .manual-guide-summary-flow {
+      display: grid;
+      grid-template-columns: repeat(9, auto);
+      align-items: center;
+      justify-content: space-between;
+      color: var(--navy);
+      font-size: var(--manual-fs-caption-strong);
+      font-weight: 800
+    }
+
+    .manual-guide-summary-step {
+      display: grid;
+      place-items: center;
+      gap: .35mm
+    }
+
+    .manual-guide-summary-step svg {
+      width: 5.4mm;
+      height: 5.4mm
+    }
+
+    .manual-guide-summary-step path,
+    .manual-guide-summary-step circle,
+    .manual-guide-summary-step rect {
+      stroke: currentColor;
+      stroke-width: 1.4;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round
+    }
+
+    .manual-guide-summary-arrow {
+      color: var(--orange);
+      font-size: var(--manual-fs-card-title)
+    }
+
+    /* ===== 发力阶段与双栏练习组件 ===== */
+    .manual-tab--stage {
+      top: 34.5mm
+    }
+
+    .manual-stage-panel {
+      position: absolute;
+      left: 5.5mm;
+      right: 5.5mm;
+      top: 40.5mm;
+      height: 101.5mm;
+      padding: 3.5mm 3mm 3mm;
+      display: grid;
+      grid-template-rows: minmax(0, 1fr) 19mm;
+      gap: 2.5mm;
+      overflow: hidden;
+      border-top-left-radius: 0
+    }
+
+    .manual-stage-grid {
+      min-height: 0;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr)
+    }
+
+    .manual-stage-item {
+      min-width: 0;
+      min-height: 0;
+      overflow: hidden;
+      padding: 0 3mm;
+      display: grid;
+      grid-template-rows: 8mm 13mm minmax(0, 1fr);
+      text-align: center;
+      border-right: .25mm solid var(--line)
+    }
+
+    .manual-stage-item:last-child {
+      border-right: 0
+    }
+
+    .manual-stage-head {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5mm
+    }
+
+    .manual-stage-number {
+      width: 6.5mm;
+      height: 6.5mm;
+      border-radius: 50%;
+      background: var(--navy);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-size: var(--manual-fs-caption);
+      font-weight: 900;
+      font-variant-numeric: tabular-nums
+    }
+
+    .manual-stage-item h3 {
+      margin: 0;
+      color: var(--navy);
+      font-size: var(--manual-fs-keyword);
+      line-height: var(--manual-lh-tight);
+      font-weight: 900
+    }
+
+    .manual-stage-item p {
+      margin: .4mm 0 1.2mm;
+      color: var(--dark);
+      font-size: var(--manual-fs-body);
+      line-height: var(--manual-lh-body)
+    }
+
+    .manual-art {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      background: #fff;
+      mix-blend-mode: multiply
+    }
+
+    .manual-stage-art {
+      min-height: 0;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 1.3mm
+    }
+
+    .manual-break-band {
+      border: .25mm solid var(--line);
+      border-radius: 1.8mm;
+      background: var(--pale-gray);
+      display: grid;
+      grid-template-columns: 67mm 1fr;
+      align-items: center;
+      padding: 2mm 3mm;
+      gap: 4mm
+    }
+
+    .manual-break-copy {
+      display: grid;
+      grid-template-columns: 9mm 1fr;
+      gap: 2mm;
+      align-items: center
+    }
+
+    .manual-break-mark {
+      width: 7mm;
+      height: 7mm;
+      display: grid;
+      place-items: center;
+      color: var(--red);
+      font-size: 18pt;
+      line-height: 1;
+      font-weight: 950
+    }
+
+    .manual-break-copy b {
+      display: block;
+      color: var(--navy);
+      font-size: var(--manual-fs-card-title);
+      margin-bottom: .6mm
+    }
+
+    .manual-break-copy p {
+      margin: 0;
+      color: var(--dark);
+      font-size: var(--manual-fs-caption);
+      line-height: var(--manual-lh-body)
+    }
+
+    .manual-break-flow {
+      height: 14mm;
+      display: grid;
+      grid-template-columns: 1fr 6mm 1fr 6mm 1fr;
+      gap: 1.2mm;
+      align-items: center
+    }
+
+    .manual-mini-art {
+      height: 13mm;
+      border-radius: 1mm
+    }
+
+    .manual-flow-arrow {
+      text-align: center;
+      color: var(--navy);
+      font-size: 13pt;
+      font-weight: 900
+    }
+
+    .manual-tab--power-practice {
+      top: 149mm
+    }
+
+    .manual-practice-panel--two-column {
+      position: absolute;
+      left: 5.5mm;
+      right: 5.5mm;
+      top: 155mm;
+      height: 98.5mm;
+      padding: 3.5mm;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      overflow: hidden;
+      border-top-left-radius: 0
+    }
+
+    .manual-practice-panel--two-column .manual-practice-card {
+      min-width: 0;
+      display: grid;
+      grid-template-rows: 8mm 7mm 39mm 19.8mm 13mm;
+      row-gap: 1mm;
+      overflow: hidden
+    }
+
+    .manual-practice-panel--two-column .manual-practice-card:first-of-type {
+      padding-right: 3.5mm;
+      border-right: .25mm dashed var(--line)
+    }
+
+    .manual-practice-panel--two-column .manual-practice-card:last-child {
+      padding-left: 3.5mm
+    }
+
+    .manual-practice-panel--two-column .manual-practice-art {
+      height: 39mm;
+      border-radius: 1.6mm
+    }
+
+    .manual-practice-panel--two-column .manual-practice-list {
+      margin: 0;
+      padding: 2mm 0 0 4.9mm;
+      color: var(--dark);
+      font-size: var(--manual-fs-body);
+      line-height: var(--manual-lh-body)
+    }
+
+    .manual-practice-panel--two-column .manual-practice-list li {
+      margin: 0 0 .45mm;
+      padding-left: .4mm
+    }
+
+    .manual-practice-panel--two-column .manual-practice-tip {
+      height: 13mm;
+      border: .25mm solid var(--line);
+      border-radius: 1.6mm;
+      background: linear-gradient(90deg, var(--pale-blue), #fff);
+      display: grid;
+      grid-template-columns: 8mm 1fr;
+      gap: 1.8mm;
+      align-items: center;
+      padding: 1.2mm 1.8mm
+    }
+
+    .manual-tip-icon {
+      border-radius: 50%;
+      background: var(--navy);
+      color: #fff;
+      display: grid;
+      place-items: center
+    }
+
+    .manual-tip-icon svg {
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round
+    }
+
+    .manual-practice-panel--two-column .manual-practice-tip .manual-tip-icon {
+      width: 7mm;
+      height: 7mm
+    }
+
+    .manual-practice-panel--two-column .manual-practice-tip .manual-tip-icon svg {
+      width: 4.5mm;
+      height: 4.5mm
+    }
+
+    .manual-practice-panel--two-column .manual-practice-tip p {
+      margin: 0;
+      color: var(--dark);
+      font-size: var(--manual-fs-caption);
+      line-height: 1.25
+    }
+
+    .manual-practice-panel--two-column .manual-practice-tip b {
+      display: block;
+      color: var(--navy);
+      font-size: var(--manual-fs-body);
+      margin-bottom: .2mm
+    }
+
+    /* ===== 发力链、动作对照与三栏练习组件 ===== */
+    .manual-tab--chain {
+      left: 5.5mm;
+      top: 34.5mm
+    }
+
+    .manual-tab--comparison {
+      left: calc(50% + 1.75mm);
+      top: 34.5mm
+    }
+
+    .manual-dual-grid {
+      position: absolute;
+      left: 5.5mm;
+      right: 5.5mm;
+      top: 40.5mm;
+      height: 90mm;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 3.5mm
+    }
+
+    .manual-dual-panel {
+      min-width: 0;
+      padding: 3mm;
+      overflow: hidden;
+      border-top-left-radius: 0
+    }
+
+    .manual-chain-layout {
+      height: 100%;
+      display: grid;
+      grid-template-rows: 1fr 19mm;
+      gap: 2.5mm
+    }
+
+    .manual-chain-main {
+      min-height: 0;
+      display: grid;
+      grid-template-columns: 29mm 35mm minmax(0, 1fr);
+      gap: 1.5mm;
+      align-items: stretch
+    }
+
+    .manual-chain-steps {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-rows: repeat(6, 1fr);
+      align-items: center;
+      padding: 1mm 0
+    }
+
+    .manual-chain-step {
+      display: grid;
+      grid-template-columns: 5.5mm 1fr;
+      gap: 1.2mm;
+      align-items: center;
+      min-height: 0;
+      transition: transform .2s ease
+    }
+
+    .manual-chain-step:nth-child(1) {
+      grid-row: 6;
+      transform: translateX(0)
+    }
+
+    .manual-chain-step:nth-child(2) {
+      grid-row: 5;
+      transform: translateX(1mm)
+    }
+
+    .manual-chain-step:nth-child(3) {
+      grid-row: 4;
+      transform: translateX(2mm)
+    }
+
+    .manual-chain-step:nth-child(4) {
+      grid-row: 3;
+      transform: translateX(3mm)
+    }
+
+    .manual-chain-step:nth-child(5) {
+      grid-row: 2;
+      transform: translateX(4mm)
+    }
+
+    .manual-chain-step:nth-child(6) {
+      grid-row: 1;
+      transform: translateX(5mm)
+    }
+
+    .manual-chain-number {
+      width: 5.5mm;
+      height: 5.5mm;
+      border-radius: 50%;
+      background: var(--navy);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-size: var(--manual-fs-caption);
+      line-height: 1;
+      font-weight: 900;
+      font-variant-numeric: tabular-nums
+    }
+
+    .manual-chain-step b {
+      display: block;
+      color: var(--navy);
+      font-size: var(--manual-fs-body);
+      line-height: 1.1
+    }
+
+    .manual-chain-step span {
+      display: block;
+      margin-top: .35mm;
+      color: var(--dark);
+      font-size: var(--manual-fs-body);
+      line-height: 1.2
+    }
+
+    .manual-chain-frame {
+      height: 100%;
+      overflow: hidden;
+      background: #fff
+    }
+
+    .manual-chain-art {
+      height: 100%;
+      object-fit: cover;
+      transform-origin: center
+    }
+
+    .manual-chain-load {
+      object-position: center;
+      transform: scale(.7)
+    }
+
+    .manual-chain-release {
+      height: 100%;
+      object-fit: cover;
+      object-position: 68% center;
+      transform: scale(.9);
+      transform-origin: center
+    }
+
+    .manual-tip-box {
+      height: 19mm;
+      border: .25mm solid var(--line);
+      border-radius: 1.8mm;
+      background: linear-gradient(90deg, var(--pale-blue), #fff);
+      display: grid;
+      grid-template-columns: 9mm 1fr;
+      gap: 2mm;
+      align-items: center;
+      padding: 1.7mm 2.4mm
+    }
+
+    .manual-tip-box .manual-tip-icon {
+      width: 8mm;
+      height: 8mm
+    }
+
+    .manual-tip-box .manual-tip-icon svg {
+      width: 5mm;
+      height: 5mm
+    }
+
+    .manual-tip-box p {
+      margin: 0;
+      color: var(--dark);
+      font-size: var(--manual-fs-body);
+      line-height: 1.3
+    }
+
+    .manual-tip-box b {
+      display: block;
+      color: var(--navy);
+      font-size: var(--manual-fs-card-title);
+      margin-bottom: .4mm
+    }
+
+    .manual-compare-list {
+      height: 100%;
+      display: grid;
+      grid-template-rows: 1fr 1fr
+    }
+
+    .manual-compare-row {
+      min-height: 0;
+      display: grid;
+      grid-template-columns: 35mm 1fr;
+      gap: 2mm;
+      align-items: center;
+      padding: 1.2mm
+    }
+
+    .manual-compare-row:first-child {
+      border-bottom: .25mm dashed var(--line)
+    }
+
+    .manual-compare-copy h3 {
+      margin: 0 0 1.4mm;
+      font-size: var(--manual-fs-card-title);
+      line-height: var(--manual-lh-tight);
+      font-weight: 900
+    }
+
+    .manual-compare-copy p {
+      margin: 0;
+      color: var(--dark);
+      font-size: var(--manual-fs-body);
+      line-height: var(--manual-lh-body)
+    }
+
+    .is-positive h3 {
+      color: #27913b
+    }
+
+    .is-negative h3 {
+      color: var(--red)
+    }
+
+    .manual-status-badge {
+      width: 7mm;
+      height: 7mm;
+      margin-bottom: 1mm;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-size: var(--manual-fs-card-title);
+      line-height: 1;
+      font-weight: 950
+    }
+
+    .is-positive .manual-status-badge {
+      background: #35a447
+    }
+
+    .is-negative .manual-status-badge {
+      background: #d6342f
+    }
+
+    .manual-compare-art {
+      height: 39mm;
+      display: grid;
+      grid-template-columns: 1fr 5mm 1fr;
+      gap: 1.2mm;
+      align-items: center
+    }
+
+    .manual-wrist-art {
+      height: 39mm;
+      object-fit: contain;
+      border-radius: 1mm;
+      transform-origin: center
+    }
+
+    .is-before {
+      transform: scale(.88)
+    }
+
+    .manual-tab--release-practice {
+      left: 5.5mm;
+      top: 137.5mm
+    }
+
+    .manual-practice-panel--three-column {
+      position: absolute;
+      left: 5.5mm;
+      right: 5.5mm;
+      top: 143.5mm;
+      height: 88mm;
+      padding: 3mm;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      overflow: hidden;
+      border-top-left-radius: 0
+    }
+
+    .manual-practice-panel--three-column .manual-practice-card {
+      min-width: 0;
+      padding: 0 3mm;
+      display: grid;
+      grid-template-rows: 8mm 7mm 31mm 22mm 10.5mm;
+      row-gap: .7mm;
+      overflow: hidden
+    }
+
+    .manual-practice-panel--three-column .manual-practice-card:first-child {
+      padding-left: 0
+    }
+
+    .manual-practice-panel--three-column .manual-practice-card:last-child {
+      padding-right: 0
+    }
+
+    .manual-practice-panel--three-column .manual-practice-card:not(:last-child) {
+      border-right: .25mm dashed var(--line)
+    }
+
+    .manual-practice-panel--three-column .manual-practice-art {
+      height: 33.5mm;
+      object-fit: contain;
+      object-position: center;
+      border-radius: 1.3mm
+    }
+
+    .manual-practice-panel--three-column .manual-practice-list {
+      margin: 0;
+      padding: 1.1mm 0 0 4.9mm;
+      color: var(--dark);
+      font-size: var(--manual-fs-body);
+      line-height: 1.32
+    }
+
+    .manual-practice-panel--three-column .manual-practice-list li {
+      margin: 0 0 .35mm;
+      padding-left: .4mm
+    }
+
+    .manual-practice-panel--three-column .manual-practice-tip {
+      height: 10.5mm;
+      border: .25mm solid var(--line);
+      border-radius: 1.5mm;
+      background: linear-gradient(90deg, var(--pale-blue), #fff);
+      display: grid;
+      grid-template-columns: 6.5mm 1fr;
+      gap: 1.2mm;
+      align-items: center;
+      padding: .8mm 1.3mm
+    }
+
+    .manual-practice-panel--three-column .manual-practice-tip .manual-tip-icon {
+      width: 6mm;
+      height: 6mm
+    }
+
+    .manual-practice-panel--three-column .manual-practice-tip .manual-tip-icon svg {
+      width: 3.8mm;
+      height: 3.8mm
+    }
+
+    .manual-practice-panel--three-column .manual-practice-tip p {
+      margin: 0;
+      color: var(--dark);
+      font-size: var(--manual-fs-caption);
+      line-height: 1.2
+    }
+
+    .manual-practice-panel--three-column .manual-practice-tip b {
+      color: var(--navy);
+      margin-right: 1mm
+    }
+
+    .manual-error-strip {
+      position: absolute;
+      left: 5.5mm;
+      right: 5.5mm;
+      top: 237mm;
+      height: 20mm;
+      border: .25mm solid var(--line);
+      border-radius: 2mm;
+      background: #fff;
+      display: grid;
+      grid-template-columns: 32mm repeat(4, 1fr);
+      align-items: center;
+      padding: 1.5mm 2mm
+    }
+
+    .manual-error-title {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      gap: 2mm;
+      color: var(--red);
+      font-size: var(--manual-fs-card-title);
+      font-weight: 900;
+      border-right: .25mm dashed var(--line)
+    }
+
+    .manual-warning-icon {
+      width: 8mm;
+      height: 8mm;
+      border-radius: 1.4mm;
+      background: var(--red);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-size: var(--manual-fs-card-title);
+      font-weight: 950
+    }
+
+    .manual-error-item {
+      height: 100%;
+      padding: 0 2mm;
+      display: grid;
+      grid-template-columns: 15.5mm 1fr;
+      gap: 1.8mm;
+      align-items: center;
+      border-right: .25mm dashed var(--line)
+    }
+
+    .manual-error-item:last-child {
+      border-right: 0
+    }
+
+    .manual-error-art {
+      width: 15.5mm;
+      height: 15mm;
+      object-fit: cover;
+      border-radius: 1.2mm
+    }
+
+    .manual-error-item p {
+      margin: 0;
+      color: var(--dark);
+      font-size: var(--manual-fs-body);
+      line-height: 1.25
+    }
+
+    .manual-error-item b {
+      display: block;
+      color: var(--navy);
+      font-size: var(--manual-fs-body);
+      margin-bottom: .4mm
+    }
+
+    /* ===== 纠错流程与数据表格组件 ===== */
+    .manual-tab--process {
+      top: 34.5mm
+    }
+
+    .manual-process-panel {
+      position: absolute;
+      left: 5.5mm;
+      right: 5.5mm;
+      top: 40.5mm;
+      height: 62mm;
+      padding: 3.5mm 3mm;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      overflow: hidden;
+      border-top-left-radius: 0
+    }
+
+    .manual-process-step {
+      position: relative;
+      min-width: 0;
+      padding: 0 3mm;
+      text-align: center;
+      display: grid;
+      grid-template-rows: 8mm 34mm 9mm;
+      row-gap: 1mm;
+      align-content: center;
+      align-items: center;
+      border-right: .25mm dashed var(--line)
+    }
+
+    .manual-process-step:last-child {
+      border-right: 0
+    }
+
+    .manual-process-step:not(:last-child):after {
+      content: "";
+      position: absolute;
+      right: -2.9mm;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 5.8mm;
+      height: 4mm;
+      background: var(--orange);
+      clip-path: polygon(0 28%, 68% 28%, 68% 0, 100% 50%, 68% 100%, 68% 72%, 0 72%);
+      z-index: 2
+    }
+
+    .manual-process-head {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2mm
+    }
+
+    .manual-process-number {
+      width: 7mm;
+      height: 7mm;
+      border-radius: 50%;
+      background: var(--navy);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-size: var(--manual-fs-body);
+      font-weight: 900
+    }
+
+    .manual-process-step h3 {
+      margin: 0;
+      color: var(--navy);
+      font-size: var(--manual-fs-card-title);
+      line-height: var(--manual-lh-tight);
+      font-weight: 900
+    }
+
+    .manual-process-art {
+      width: 100%;
+      height: 34mm;
+      overflow: hidden;
+      border-radius: 1.4mm;
+      background: #fff;
+      display: grid;
+      place-items: center
+    }
+
+    .manual-process-image {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      background: #fff
+    }
+
+    .manual-process-step p {
+      margin: 0;
+      color: var(--dark);
+      font-size: var(--manual-fs-body);
+      line-height: var(--manual-lh-body)
+    }
+
+    .manual-tab--table {
+      top: 110mm
+    }
+
+    .manual-table-panel {
+      position: absolute;
+      left: 5.5mm;
+      right: 5.5mm;
+      top: 116mm;
+      height: 138.5mm;
+      padding: 3mm;
+      overflow: hidden;
+      border-top-left-radius: 0
+    }
+
+    .manual-data-table {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      border-collapse: separate;
+      border-spacing: 0;
+      table-layout: fixed
+    }
+
+    .manual-data-table th {
+      height: 8.5mm;
+      padding: 1.1mm 2mm;
+      background: var(--navy);
+      color: #fff;
+      border: 0;
+      border-right: .25mm solid rgba(255, 255, 255, .24);
+      font-size: var(--manual-fs-body);
+      line-height: 1.2;
+      font-weight: 900
+    }
+
+    .manual-data-table th:first-child {
+      border-top-left-radius: 1.4mm
+    }
+
+    .manual-data-table th:last-child {
+      border-top-right-radius: 1.4mm;
+      border-right: 0
+    }
+
+    .manual-data-table td {
+      height: 20.3mm;
+      padding: 1.4mm 2.2mm;
+      border: 0;
+      border-right: .2mm solid var(--line);
+      border-bottom: .2mm solid var(--line);
+      vertical-align: middle;
+      color: var(--dark);
+      font-size: var(--manual-fs-body);
+      line-height: 1.28
+    }
+
+    .manual-data-table td:first-child {
+      color: var(--navy);
+      font-weight: 800;
+      border-left: .2mm solid var(--line)
+    }
+
+    .manual-data-table tr:nth-child(even) td {
+      background: var(--pale-gray)
+    }
+
+    .manual-safety-note {
+      position: absolute;
+      left: 5.5mm;
+      right: 5.5mm;
+      top: 262.5mm;
+      height: 21mm;
+      border: .25mm solid #d8a29a;
+      border-radius: 2.5mm;
+      background: linear-gradient(90deg, var(--pale-red), #fff);
+      display: grid;
+      grid-template-columns: 12mm 30mm 1fr;
+      align-items: center;
+      padding: 2mm 3mm;
+      column-gap: 2mm
+    }
+
+    .manual-safety-icon {
+      width: 9mm;
+      height: 9mm;
+      border-radius: 1.8mm;
+      background: var(--red);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-size: var(--manual-fs-card-title);
+      font-weight: 950
+    }
+
+    .manual-safety-note b {
+      color: var(--red);
+      font-size: var(--manual-fs-card-title)
+    }
+
+    .manual-safety-note span {
+      font-size: var(--manual-fs-body);
+      line-height: var(--manual-lh-body)
+    }
+
+    /* ===== 进阶路径、信号与衔接练习组件 ===== */
+    .manual-tab--progression {
+      top: 34.5mm
+    }
+
+    .manual-tab--signals {
+      left: calc(5.5mm + 60mm + 3.5mm);
+      top: 34.5mm
+    }
+
+    .manual-split-grid {
+      position: absolute;
+      left: 5.5mm;
+      right: 5.5mm;
+      display: grid;
+      gap: 3.5mm
+    }
+
+    .manual-split-panel {
+      min-width: 0;
+      overflow: hidden;
+      border-top-left-radius: 0
+    }
+
+    .manual-split-grid--progression {
+      top: 40.5mm;
+      height: 148.5mm;
+      grid-template-columns: 60mm minmax(0, 1fr)
+    }
+
+    .manual-split-grid--progression .manual-split-panel {
+      padding: 3.5mm
+    }
+
+    .manual-progression-list {
+      height: 100%;
+      display: grid;
+      grid-template-rows: repeat(6, 1fr)
+    }
+
+    .manual-progression-step {
+      position: relative;
+      display: grid;
+      grid-template-columns: 10mm 1fr;
+      gap: 2.5mm;
+      align-items: center;
+      padding: 1.4mm 0
+    }
+
+    .manual-progression-step:not(:last-child):after {
+      content: "";
+      position: absolute;
+      left: 4.4mm;
+      bottom: -2.4mm;
+      height: 4.8mm;
+      border-left: .35mm solid #9cb3c8
+    }
+
+    .manual-progression-number {
+      width: 9mm;
+      height: 9mm;
+      border-radius: 50%;
+      background: var(--navy);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-size: var(--manual-fs-caption);
+      font-weight: 900;
+      font-variant-numeric: tabular-nums
+    }
+
+    .manual-progression-step h3 {
+      margin: 0 0 .7mm;
+      color: var(--navy);
+      font-size: var(--manual-fs-card-title);
+      line-height: var(--manual-lh-tight)
+    }
+
+    .manual-progression-step p {
+      margin: 0;
+      color: var(--dark);
+      font-size: var(--manual-fs-body);
+      line-height: 1.3
+    }
+
+    .manual-signal-list {
+      height: 100%;
+      display: grid;
+      grid-template-rows: repeat(4, 1fr)
+    }
+
+    .manual-signal-item {
+      display: grid;
+      grid-template-columns: 9mm 42mm minmax(0, 1fr);
+      align-items: center;
+      gap: 2mm;
+      padding: 1.5mm 2mm;
+      border-bottom: .25mm dashed var(--line)
+    }
+
+    .manual-signal-item:last-child {
+      border-bottom: 0
+    }
+
+    .manual-signal-icon {
+      width: 9mm;
+      height: 9mm;
+      border-radius: 50%;
+      background: var(--pale-blue);
+      color: var(--navy);
+      display: grid;
+      place-items: center;
+      font-size: var(--manual-fs-body);
+      font-weight: 950
+    }
+
+    .manual-signal-art {
+      width: 42mm;
+      height: 28mm;
+      overflow: hidden;
+      border-radius: 1.4mm;
+      background: #fff;
+      display: grid;
+      place-items: center
+    }
+
+    .manual-signal-image {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      background: #fff
+    }
+
+    .manual-signal-item h3 {
+      margin: 0 0 1mm;
+      color: var(--navy);
+      font-size: var(--manual-fs-card-title)
+    }
+
+    .manual-signal-item p {
+      margin: 0;
+      color: var(--dark);
+      font-size: var(--manual-fs-body);
+      line-height: var(--manual-lh-body)
+    }
+
+    .manual-tab--bridge {
+      top: 193.5mm
+    }
+
+    .manual-bridge-panel {
+      position: absolute;
+      left: 5.5mm;
+      right: 5.5mm;
+      top: 199mm;
+      height: 55mm;
+      padding: 3mm;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      overflow: hidden;
+      border-top-left-radius: 0
+    }
+
+    .manual-bridge-item {
+      min-width: 0;
+      padding: 2mm 4mm;
+      display: grid;
+      grid-template-rows: 7mm 27mm 1fr;
+      row-gap: .8mm;
+      align-items: center;
+      border-right: .25mm dashed var(--line)
+    }
+
+    .manual-bridge-item:last-child {
+      border-right: 0
+    }
+
+    .manual-bridge-item h3 {
+      margin: 0;
+      color: var(--navy);
+      font-size: var(--manual-fs-card-title)
+    }
+
+    .manual-bridge-art {
+      width: 100%;
+      height: 27mm;
+      overflow: hidden;
+      border-radius: 1.3mm;
+      background: #fff;
+      display: grid;
+      place-items: center
+    }
+
+    .manual-bridge-image {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      background: #fff
+    }
+
+    .manual-bridge-item p {
+      margin: 0;
+      color: var(--dark);
+      font-size: var(--manual-fs-body);
+      line-height: var(--manual-lh-body)
+    }
+
+    /* ===== 训练时间线、约束与模块组件 ===== */
+    .manual-tab--timeline {
+      top: 34.5mm
+    }
+
+    .manual-timeline-panel {
+      position: absolute;
+      left: 5.5mm;
+      right: 5.5mm;
+      top: 40.5mm;
+      height: 55mm;
+      padding: 4mm 3.5mm 3mm;
+      overflow: hidden;
+      border-top-left-radius: 0
+    }
+
+    .manual-timeline-bar {
+      height: 13mm;
+      display: grid;
+      grid-template-columns: 8fr 15fr 15fr 15fr 7fr;
+      border-radius: 1.5mm 1.5mm 0 0;
+      overflow: hidden
+    }
+
+    .manual-timeline-bar span {
+      display: grid;
+      place-items: center;
+      background: var(--navy);
+      color: #fff;
+      font-size: var(--manual-fs-section-tab);
+      font-weight: 900;
+      border-right: .25mm solid rgba(255, 255, 255, .3)
+    }
+
+    .manual-timeline-bar span:first-child,
+    .manual-timeline-bar span:last-child {
+      background: var(--orange)
+    }
+
+    .manual-timeline-bar span:last-child {
+      border-right: 0
+    }
+
+    .manual-timeline-labels {
+      height: calc(100% - 13mm);
+      display: grid;
+      grid-template-columns: 8fr 15fr 15fr 15fr 7fr;
+      text-align: center;
+      border: .25mm solid var(--line);
+      border-top: 0;
+      border-radius: 0 0 1.5mm 1.5mm;
+      overflow: hidden
+    }
+
+    .manual-timeline-labels div {
+      height: 100%;
+      padding: 2.2mm 1.5mm 0;
+      border-right: .25mm dashed var(--line)
+    }
+
+    .manual-timeline-labels div:last-child {
+      border-right: 0
+    }
+
+    .manual-timeline-labels h3 {
+      margin: 0 0 .8mm;
+      color: var(--navy);
+      font-size: var(--manual-fs-card-title)
+    }
+
+    .manual-timeline-labels p {
+      margin: 0;
+      color: var(--dark);
+      font-size: var(--manual-fs-body);
+      line-height: 1.3
+    }
+
+    .manual-tab--constraint {
+      top: 102.5mm
+    }
+
+    .manual-tab--module {
+      left: calc(50% + 1.75mm);
+      top: 102.5mm
+    }
+
+    .manual-split-grid--training {
+      top: 108.5mm;
+      height: 145.5mm;
+      grid-template-columns: repeat(2, minmax(0, 1fr))
+    }
+
+    .manual-split-grid--training .manual-split-panel {
+      padding: 3mm
+    }
+
+    .manual-constraint-list {
+      height: 100%;
+      display: grid;
+      grid-template-rows: repeat(5, 1fr)
+    }
+
+    .manual-constraint-item {
+      display: grid;
+      grid-template-columns: 12mm 20mm 1fr;
+      gap: 2mm;
+      align-items: center;
+      padding: 1.5mm 2mm;
+      border-bottom: .25mm dashed var(--line)
+    }
+
+    .manual-constraint-item:last-child {
+      border-bottom: 0
+    }
+
+    .manual-constraint-item svg {
+      width: 9mm;
+      height: 9mm
+    }
+
+    .manual-constraint-icon--orange {
+      color: var(--orange)
+    }
+
+    .manual-constraint-icon--navy {
+      color: var(--navy)
+    }
+
+    .manual-constraint-item b {
+      color: var(--navy);
+      font-size: var(--manual-fs-card-title)
+    }
+
+    .manual-constraint-item span {
+      font-size: var(--manual-fs-body);
+      line-height: 1.3
+    }
+
+    .manual-module-list {
+      height: 100%;
+      display: grid;
+      grid-template-rows: repeat(4, 1fr)
+    }
+
+    .manual-module-item {
+      display: grid;
+      grid-template-columns: 11mm 1fr;
+      gap: 2mm;
+      align-items: center;
+      padding: 2mm;
+      border-bottom: .25mm dashed var(--line)
+    }
+
+    .manual-module-item:last-child {
+      border-bottom: 0
+    }
+
+    .manual-module-number {
+      width: 9mm;
+      height: 9mm;
+      border-radius: 50%;
+      background: var(--navy);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-size: var(--manual-fs-body);
+      font-weight: 900
+    }
+
+    .manual-module-item h3 {
+      margin: 0 0 .9mm;
+      color: var(--navy);
+      font-size: var(--manual-fs-card-title)
+    }
+
+    .manual-module-item p {
+      margin: 0;
+      color: var(--dark);
+      font-size: var(--manual-fs-body);
+      line-height: var(--manual-lh-body)
+    }
+
+    /* ===== 评估、复盘与参考资料组件 ===== */
+    .manual-tab--record {
+      top: 34.5mm
+    }
+
+    .manual-tab--video {
+      left: calc(5.5mm + 116mm + 3.5mm);
+      top: 34.5mm
+    }
+
+    .manual-split-grid--review {
+      top: 40.5mm;
+      height: 121.5mm;
+      grid-template-columns: 116mm minmax(0, 1fr)
+    }
+
+    .manual-split-grid--review .manual-split-panel {
+      padding: 3.5mm
+    }
+
+    .manual-record-list {
+      height: 100%;
+      display: grid;
+      grid-template-rows: repeat(5, 1fr) 17mm
+    }
+
+    .manual-record-row {
+      display: grid;
+      grid-template-columns: 25mm 1fr;
+      align-items: center;
+      padding: 1.5mm 2mm;
+      border-bottom: .25mm dashed var(--line)
+    }
+
+    .manual-record-row b {
+      color: var(--navy);
+      font-size: var(--manual-fs-card-title)
+    }
+
+    .manual-record-row span {
+      font-size: var(--manual-fs-body);
+      line-height: var(--manual-lh-body)
+    }
+
+    .manual-record-result {
+      display: grid;
+      grid-template-columns: 25mm 1fr;
+      align-items: center;
+      padding: 1.5mm 2mm
+    }
+
+    .manual-record-result>b {
+      color: var(--navy);
+      font-size: var(--manual-fs-card-title)
+    }
+
+    .manual-check-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2mm 2mm
+    }
+
+    .manual-check-item {
+      display: flex;
+      align-items: center;
+      font-size: var(--manual-fs-caption);
+      line-height: 1.2
+    }
+
+    .manual-check-item i {
+      width: 3.5mm;
+      height: 3.5mm;
+      border: .25mm solid var(--navy);
+      margin-right: 1.4mm;
+      flex: 0 0 auto
+    }
+
+    .manual-video-list {
+      height: 100%;
+      display: grid;
+      grid-template-rows: repeat(4, 1fr) 21mm
+    }
+
+    .manual-video-question {
+      display: grid;
+      grid-template-columns: 9mm 1fr;
+      align-items: center;
+      gap: 2mm;
+      padding: 1.6mm 1mm;
+      border-bottom: .25mm dashed var(--line)
+    }
+
+    .manual-question-number {
+      width: 7mm;
+      height: 7mm;
+      border-radius: 50%;
+      background: var(--navy);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-size: var(--manual-fs-caption);
+      font-weight: 900
+    }
+
+    .manual-video-question h3 {
+      margin: 0 0 .6mm;
+      color: var(--navy);
+      font-size: var(--manual-fs-card-title);
+      line-height: 1.15
+    }
+
+    .manual-video-question p {
+      margin: 0;
+      color: var(--dark);
+      font-size: var(--manual-fs-body);
+      line-height: 1.25
+    }
+
+    .manual-stop-note {
+      margin-top: 2mm;
+      border-radius: 1.5mm;
+      background: var(--pale-red);
+      display: grid;
+      grid-template-columns: 24mm 1fr;
+      align-items: center;
+      padding: 2mm 3mm;
+      color: var(--red)
+    }
+
+    .manual-stop-note b {
+      font-size: var(--manual-fs-card-title)
+    }
+
+    .manual-stop-note span {
+      font-size: var(--manual-fs-body);
+      line-height: 1.3
+    }
+
+    .manual-tab--philosophy {
+      top: 169mm
+    }
+
+    .manual-philosophy-panel {
+      position: absolute;
+      left: 5.5mm;
+      right: 5.5mm;
+      top: 175mm;
+      height: 26mm;
+      padding: 3mm;
+      overflow: hidden;
+      border-top-left-radius: 0
+    }
+
+    .manual-philosophy-list {
+      height: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr)
+    }
+
+    .manual-philosophy-item {
+      display: grid;
+      grid-template-columns: 7mm 1fr;
+      gap: 1.8mm;
+      align-content: start;
+      align-items: start;
+      padding: 2.5mm 3mm;
+      border-right: .25mm dashed var(--line)
+    }
+
+    .manual-philosophy-item:last-child {
+      border-right: 0
+    }
+
+    .manual-philosophy-number {
+      width: 7mm;
+      height: 7mm;
+      border-radius: 50%;
+      background: var(--navy);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-size: var(--manual-fs-caption);
+      font-weight: 900
+    }
+
+    .manual-philosophy-item h3 {
+      margin: 0 0 .7mm;
+      color: var(--navy);
+      font-size: var(--manual-fs-card-title);
+      line-height: var(--manual-lh-tight)
+    }
+
+    .manual-philosophy-item p {
+      margin: 0;
+      color: var(--dark);
+      font-size: var(--manual-fs-caption);
+      line-height: 1.3
+    }
+
+    .manual-tab--references {
+      top: 208mm
+    }
+
+    .manual-reference-panel {
+      position: absolute;
+      left: 5.5mm;
+      right: 5.5mm;
+      top: 214mm;
+      height: 42mm;
+      padding: 3.5mm;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5mm;
+      overflow: hidden;
+      border-top-left-radius: 0
+    }
+
+    .manual-reference-box {
+      min-width: 0;
+      padding: 2.5mm 3mm;
+      background: var(--pale-gray);
+      border-radius: 1.5mm;
+      color: var(--dark);
+      font-size: var(--manual-fs-reference);
+      line-height: 1.42
+    }
+
+    .manual-reference-box i {
+      color: var(--navy)
+    }
+
+    .manual-source-note {
+      position: absolute;
+      left: 5.5mm;
+      right: 5.5mm;
+      top: 262.5mm;
+      height: 21mm;
+      border: .25mm solid var(--line);
+      border-radius: 2.5mm;
+      background: linear-gradient(90deg, var(--pale-blue), #fff);
+      display: grid;
+      grid-template-columns: 12mm 25mm 1fr;
+      align-items: center;
+      padding: 2mm 3mm;
+      column-gap: 2mm
+    }
+
+    .manual-source-icon {
+      width: 9mm;
+      height: 9mm;
+      border-radius: 50%;
+      background: var(--navy);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-size: var(--manual-fs-card-title);
+      font-weight: 950
+    }
+
+    .manual-source-note b {
+      color: var(--navy);
+      font-size: var(--manual-fs-card-title)
+    }
+
+    .manual-source-note span {
+      font-size: var(--manual-fs-body);
+      line-height: 1.3
+    }
+
+    /* ===== Screen redesign: continuous web reading layout ===== */
+    @media screen {
+      :root {
+        --navy: #10253f;
+        --orange: #e86b2d;
+        --orange-dark: #b9501f;
+        --paper: #f3eee6;
+        --ink: #18232d;
+        --muted: #66717e;
+        --line: #d8d4cc;
+        --panel: #fffdf9;
+      }
+
+      html {
+        background: var(--paper);
+        scroll-padding-top: 24px;
+      }
+
+      body {
+        min-width: 0;
+        overflow-x: hidden;
+        color: var(--ink);
+        background-color: var(--paper);
+        background-image: radial-gradient(rgba(16, 37, 63, .065) .7px, transparent .7px);
+        background-size: 18px 18px;
+        font-family: "Avenir Next", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+      }
+
+      .language-switcher {
+        position: fixed;
+        top: 16px;
+        right: clamp(16px, 3vw, 36px);
+        z-index: 20;
+        display: flex;
+        gap: 2px;
+        padding: 4px;
+        border: 1px solid rgba(16, 37, 63, .12);
+        border-radius: 10px;
+        background: rgba(255, 253, 249, .9);
+        box-shadow: 0 8px 20px rgba(16, 37, 63, .12);
+        backdrop-filter: blur(16px);
+      }
+
+      .language-switcher button {
+        min-width: 38px;
+        border: 0;
+        border-radius: 7px;
+        padding: 7px 8px;
+        background: transparent;
+        color: var(--navy);
+        font: 700 11px/1 inherit;
+        letter-spacing: .04em;
+        cursor: pointer;
+        transition: background-color .2s ease, color .2s ease, transform .2s ease;
+      }
+
+      .language-switcher button:hover {
+        transform: translateY(-1px);
+        background: var(--pale-orange);
+        color: var(--orange-dark)
+      }
+
+      .language-switcher button:active {
+        transform: translateY(0) scale(.98)
+      }
+
+      .language-switcher button[aria-pressed="true"] {
+        background: var(--navy);
+        color: #fff
+      }
+
+      .language-switcher button:focus-visible {
+        outline: 3px solid rgba(232, 107, 45, .32);
+        outline-offset: 2px
+      }
+
+      html[lang="en-US"] body {
+        font-family: "Avenir Next", "Segoe UI", Arial, sans-serif
+      }
+
+      html[lang="en-US"] .manual-copy,
+      html[lang="en-US"] .manual-page-deck,
+      html[lang="en-US"] .manual-summary-bar>span,
+      html[lang="en-US"] .manual-guide-summary-copy,
+      html[lang="en-US"] .manual-source-note span {
+        overflow-wrap: anywhere;
+        word-break: normal;
+        text-wrap: pretty
+      }
+
+      html[lang="en-US"] .manual-page-title {
+        font-size: clamp(21px, 2.6vw, 40px);
+        letter-spacing: -.065em;
+        white-space: nowrap
+      }
+
+      html[lang="en-US"] .manual-observation-key {
+        font-size: clamp(14px, 1.35vw, 18px);
+        white-space: nowrap !important;
+        overflow-wrap: normal !important;
+        word-break: normal !important;
+        text-wrap: nowrap !important;
+        letter-spacing: -.045em
+      }
+
+      html[lang="en-US"] .manual-compare-copy h3,
+      html[lang="en-US"] .manual-concept-card h3,
+      html[lang="en-US"] .manual-practice-card h3,
+      html[lang="en-US"] .manual-bridge-item h3,
+      html[lang="en-US"] .manual-process-step p {
+        white-space: nowrap;
+        overflow-wrap: normal;
+        word-break: normal
+      }
+
+      html[lang="en-US"] .cover-title-block h1 span {
+        white-space: normal
+      }
+
+      html[lang="en-US"] .cover-title-block h1 {
+        font-size: clamp(42px, 6.3vw, 92px)
+      }
+
+      .document {
+        width: min(100%, 1440px);
+        margin: 0 auto;
+        padding: clamp(16px, 4vw, 64px) clamp(14px, 4vw, 52px) 72px;
+      }
+
+      .page {
+        width: auto;
+        height: auto;
+        min-height: 0;
+        margin: 0 auto clamp(32px, 3.5vw, 52px);
+        overflow: visible;
+        background: transparent;
+        box-shadow: none;
+        page-break-after: auto;
+        break-after: auto;
+      }
+
+      .manual-page {
+        position: relative;
+        padding-top: clamp(24px, 3.4vw, 44px);
+        color: var(--ink);
+        background: transparent;
+      }
+
+      .manual-page-title {
+        position: relative;
+        left: auto;
+        right: auto;
+        top: auto;
+        width: fit-content;
+        max-width: 100%;
+        height: auto;
+        margin: 0;
+        padding: clamp(14px, 1.7vw, 22px) clamp(18px, 2.7vw, 34px) clamp(16px, 1.8vw, 24px);
+        border-radius: 0 18px 18px 0;
+        background: var(--navy);
+        color: #fff;
+        font-size: clamp(29px, 4vw, 58px);
+        line-height: 1.06;
+        letter-spacing: -.055em;
+        box-shadow: 12px 14px 0 rgba(232, 107, 45, .13), 0 18px 32px rgba(16, 37, 63, .16);
+        text-wrap: balance;
+      }
+
+      .manual-page-deck {
+        position: relative;
+        left: auto;
+        right: auto;
+        top: auto;
+        max-width: 820px;
+        margin: 22px 0 38px;
+        padding-left: clamp(18px, 3vw, 38px);
+        border-left: 3px solid var(--orange);
+        color: var(--muted);
+        font-size: clamp(15px, 1.35vw, 18px);
+        line-height: 1.8;
+        text-align: left;
+        text-wrap: pretty;
+      }
+
+      .manual-page-deck b {
+        color: var(--orange-dark)
+      }
+
+      /* 网页端统一改为正常文档流，覆盖打印版的 A4 坐标定位。 */
+      .manual-page--guide .manual-page-deck {
+        position: relative;
+        left: auto;
+        right: auto;
+        top: auto;
+        max-width: 820px;
+        margin: 22px 0 38px;
+        padding-left: clamp(18px, 3vw, 38px);
+        border-left: 3px solid var(--orange);
+        color: var(--muted);
+        font-size: clamp(15px, 1.35vw, 18px);
+        line-height: 1.8;
+        text-align: left;
+      }
+
+      .manual-stage-panel,
+      .manual-error-strip {
+        position: relative;
+        left: auto;
+        right: auto;
+        top: auto;
+        width: auto;
+        height: auto;
+      }
+
+      .manual-stage-panel {
+        overflow: visible
+      }
+
+      .manual-error-strip {
+        overflow: visible
+      }
+
+      .manual-footer {
+        display: none
+      }
+
+      .manual-panel {
+        border: 1px solid var(--line);
+        border-radius: 0 20px 20px 20px;
+        background: var(--panel);
+        box-shadow: 0 12px 30px rgba(16, 37, 63, .075);
+      }
+
+      .manual-tab {
+        position: relative;
+        left: auto !important;
+        top: auto !important;
+        display: inline-flex;
+        width: auto;
+        height: auto;
+        margin: 36px 0 -1px;
+        padding: 9px 15px 8px;
+        border-radius: 10px 10px 0 0;
+        background: var(--navy);
+        color: #fff;
+        font-size: 12px;
+        line-height: 1;
+        letter-spacing: .1em;
+        white-space: nowrap;
+        box-shadow: 0 -3px 0 rgba(16, 37, 63, .05);
+      }
+
+      .manual-tab-row {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: clamp(14px, 2vw, 24px);
+        align-items: start
+      }
+
+      .manual-tab-row .manual-tab {
+        justify-self: start
+      }
+
+      #progression .manual-tab-row {
+        grid-template-columns: minmax(240px, .8fr) minmax(0, 1.35fr)
+      }
+
+      #review .manual-tab-row {
+        grid-template-columns: minmax(0, 1.15fr) minmax(300px, .85fr)
+      }
+
+      .manual-tab--table {
+        border-radius: 10px 10px 0 0
+      }
+
+      .manual-tab:after {
+        display: none
+      }
+
+      .manual-footer {
+        position: relative;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        display: none;
+        justify-content: space-between;
+        margin-top: 22px;
+        padding: 0 4px;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .manual-author {
+        letter-spacing: .08em
+      }
+
+      .cover {
+        position: relative;
+        min-height: clamp(620px, 76dvh, 860px);
+        margin-bottom: clamp(32px, 3.5vw, 52px);
+        padding: clamp(42px, 6vw, 86px) clamp(28px, 6vw, 86px) 154px;
+        overflow: hidden;
+        border-radius: 26px;
+        background: var(--navy);
+        color: #fff;
+        box-shadow: 0 22px 52px rgba(16, 37, 63, .22);
+        isolation: isolate;
+      }
+
+      .cover:after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+        background: linear-gradient(115deg, rgba(16, 37, 63, .95) 0%, rgba(16, 37, 63, .64) 47%, rgba(16, 37, 63, .12) 100%);
+      }
+
+      /* 封面线稿和插图共用同一比例、同一坐标盒，避免装饰线漂移。 */
+      .cover-art {
+        position: absolute;
+        left: auto;
+        right: 0;
+        top: 4%;
+        z-index: 0;
+        width: auto;
+        height: min(88%, 840px);
+        max-width: 65%;
+        opacity: .95
+      }
+
+      .cover-illustration {
+        position: absolute;
+        left: auto;
+        top: 4%;
+        right: 0;
+        z-index: 2;
+        width: auto;
+        height: min(88%, 840px);
+        max-width: 65%;
+        object-fit: contain;
+        object-position: right bottom;
+      }
+
+      .cover-coach-label {
+        position: relative;
+        left: auto;
+        top: auto;
+        z-index: 3;
+        width: max-content;
+        color: var(--orange);
+        font-size: clamp(13px, 1.2vw, 18px);
+        letter-spacing: .14em;
+      }
+
+      .cover-coach-label:after {
+        width: 44px;
+        margin-top: 10px;
+        border-top: 3px solid var(--orange)
+      }
+
+      .cover-title-block {
+        position: relative;
+        left: auto;
+        top: auto;
+        z-index: 3;
+        width: min(58%, 680px);
+        margin-top: clamp(56px, 9vw, 118px);
+      }
+
+      .cover-title-block h1 {
+        margin: 0;
+        font-size: clamp(46px, 7vw, 104px);
+        line-height: .98;
+        letter-spacing: -.08em;
+        text-wrap: balance;
+      }
+
+      .cover-title-block h1 .title-orange {
+        margin: 8px 0;
+        color: var(--orange);
+        font-size: 1.06em
+      }
+
+      .cover-title-block .tagline {
+        margin-top: 30px;
+        padding-top: 17px;
+        color: rgba(255, 255, 255, .8);
+        font-size: clamp(13px, 1.3vw, 18px);
+        line-height: 1.6;
+        letter-spacing: .03em;
+        white-space: normal;
+      }
+
+      .cover-title-block .tagline:before {
+        width: min(100%, 430px);
+        border-top: 2px solid var(--orange)
+      }
+
+      .cover-title-block .tagline:after {
+        left: min(100%, 428px);
+        top: -3px;
+        border-left-width: 7px;
+        border-top-width: 4px;
+        border-bottom-width: 4px
+      }
+
+      .cover-feature-band {
+        position: absolute;
+        left: clamp(28px, 6vw, 86px);
+        right: auto;
+        top: auto;
+        bottom: 46px;
+        z-index: 4;
+        width: min(460px, calc(100% - 56px));
+        height: 64px;
+        border-top: 1px solid rgba(255, 255, 255, .28);
+        border-bottom: 1px solid rgba(255, 255, 255, .16);
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .cover-feature {
+        font-size: 12px;
+        letter-spacing: .12em
+      }
+
+      .cover-feature svg {
+        width: 28px;
+        height: 28px;
+        margin-bottom: 6px
+      }
+
+      .cover-footnote {
+        position: absolute;
+        left: clamp(28px, 6vw, 86px);
+        bottom: 20px;
+        z-index: 4;
+        color: rgba(255, 255, 255, .62);
+        font-size: 11px;
+        letter-spacing: .06em
+      }
+
+      .cover-small {
+        position: absolute;
+        right: clamp(28px, 6vw, 86px);
+        bottom: 20px;
+        z-index: 4;
+        max-width: 38%;
+        color: rgba(255, 255, 255, .62);
+        font-size: 11px;
+        line-height: 1.4;
+        text-align: right;
+        letter-spacing: .04em
+      }
+
+      .manual-intro-panel {
+        position: relative;
+        left: auto;
+        right: auto;
+        top: auto;
+        height: auto;
+        padding: clamp(22px, 3.2vw, 44px);
+        display: grid;
+        grid-template-columns: minmax(0, .85fr) minmax(300px, 1.15fr);
+        gap: clamp(22px, 4vw, 56px);
+        overflow: hidden;
+      }
+
+      .manual-intro-copy {
+        padding: 0 0 0 56px;
+        border-right: 0
+      }
+
+      .manual-idea-icon {
+        left: 0;
+        top: 0;
+        width: 38px;
+        height: 38px
+      }
+
+      .manual-idea-icon svg {
+        width: 23px;
+        height: 23px
+      }
+
+      .manual-intro-panel h2 {
+        margin: 0 0 14px;
+        font-size: clamp(25px, 2.5vw, 38px);
+        line-height: 1.12;
+        letter-spacing: -.04em
+      }
+
+      .manual-intro-panel p {
+        font-size: clamp(15px, 1.3vw, 18px);
+        line-height: 1.8
+      }
+
+      .manual-intro-art {
+        min-height: 260px;
+        border-radius: 14px
+      }
+
+      .manual-path-grid,
+      .manual-concept-grid,
+      .manual-observation-panel,
+      .manual-dual-grid,
+      .manual-practice-panel--two-column,
+      .manual-practice-panel--three-column,
+      .manual-process-panel,
+      .manual-bridge-panel,
+      .manual-philosophy-panel,
+      .manual-reference-panel,
+      .manual-split-grid,
+      .manual-timeline-panel,
+      .manual-table-panel,
+      .manual-safety-note,
+      .manual-source-note {
+        position: relative;
+        left: auto;
+        right: auto;
+        top: auto;
+        height: auto;
+      }
+
+      .manual-path-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: clamp(14px, 2vw, 24px)
+      }
+
+      .manual-path-card {
+        padding: clamp(20px, 2.2vw, 30px);
+        border-radius: 0 18px 18px 18px;
+        overflow: visible;
+        transition: transform .25s ease, box-shadow .25s ease
+      }
+
+      .manual-path-card:hover,
+      .manual-concept-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 18px 34px rgba(16, 37, 63, .12)
+      }
+
+      .manual-path-card:not(:last-child):after {
+        right: -15px;
+        top: 50%;
+        width: 24px;
+        height: 12px
+      }
+
+      .manual-path-head {
+        grid-template-columns: 52px 1fr
+      }
+
+      .manual-display-number {
+        font-size: 32px
+      }
+
+      .manual-path-card h3 {
+        font-size: clamp(18px, 1.6vw, 23px)
+      }
+
+      .manual-path-card>.manual-card-lead {
+        height: auto;
+        min-height: 52px;
+        margin: 14px 0;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.7
+      }
+
+      .manual-path-body {
+        height: auto;
+        grid-template-columns: minmax(90px, .9fr) 1fr;
+        gap: 12px;
+        align-items: center
+      }
+
+      .manual-path-art {
+        height: 150px;
+        border-radius: 14px
+      }
+
+      .manual-tick-list li {
+        margin: 10px 0;
+        font-size: 14px
+      }
+
+      .manual-tick-list li:before {
+        width: 16px;
+        height: 16px;
+        font-size: 9px
+      }
+
+      .manual-tick-list li {
+        padding-left: 24px
+      }
+
+      .manual-concept-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: clamp(14px, 2vw, 24px)
+      }
+
+      .manual-concept-card {
+        padding: 22px;
+        text-align: left;
+        border-radius: 0 18px 18px 18px;
+        overflow: hidden
+      }
+
+      .manual-concept-card h3 {
+        font-size: clamp(17px, 1.5vw, 21px)
+      }
+
+      .manual-concept-card p {
+        height: auto;
+        min-height: 52px;
+        margin: 10px 0;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.7
+      }
+
+      .manual-concept-art {
+        height: 190px;
+        border-radius: 14px;
+        align-items: end
+      }
+
+      .manual-observation-panel {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        padding: 18px 12px;
+        overflow: hidden
+      }
+
+      .manual-observation-item {
+        grid-template-rows: 140px auto;
+        padding: 10px 12px
+      }
+
+      .manual-observation-figure {
+        width: min(140px, 100%);
+        height: 140px
+      }
+
+      .manual-observation-key {
+        top: 8px;
+        font-size: 24px
+      }
+
+      .manual-observation-item p {
+        margin: 10px 0 0;
+        font-size: 13px;
+        line-height: 1.45
+      }
+
+      .manual-guide-summary,
+      .manual-summary-bar {
+        position: relative;
+        left: auto;
+        right: auto;
+        top: auto;
+        height: auto;
+        min-height: 86px;
+        margin-top: 24px;
+        border: 1px solid rgba(16, 37, 63, .12);
+        border-radius: 16px;
+        background: linear-gradient(100deg, #e6edf1, #fffdf9);
+        box-shadow: none;
+      }
+
+      .manual-guide-summary {
+        display: grid;
+        grid-template-columns: auto minmax(220px, 1fr) minmax(350px, 1.6fr);
+        align-items: center;
+        gap: 18px;
+        padding: 18px 22px
+      }
+
+      .manual-guide-summary .manual-idea-icon,
+      .manual-summary-bar>.manual-idea-icon {
+        position: relative;
+        left: auto;
+        top: auto;
+        width: 38px;
+        height: 38px;
+        background: var(--navy)
+      }
+
+      .manual-guide-summary-copy {
+        font-size: 14px;
+        line-height: 1.6
+      }
+
+      .manual-guide-summary-flow {
+        grid-template-columns: repeat(9, auto);
+        font-size: 13px
+      }
+
+      .manual-guide-summary-step svg {
+        width: 24px;
+        height: 24px
+      }
+
+      .manual-summary-bar {
+        display: grid;
+        grid-template-columns: auto minmax(110px, 170px) 1fr;
+        align-items: center;
+        gap: 16px;
+        padding: 18px 22px
+      }
+
+      .manual-summary-bar>.manual-idea-icon {
+        background: var(--orange)
+      }
+
+      .manual-summary-bar>b {
+        font-size: 14px
+      }
+
+      .manual-summary-bar>span {
+        font-size: 14px;
+        line-height: 1.6
+      }
+
+      .manual-stage-panel {
+        display: grid;
+        grid-template-rows: auto auto;
+        gap: 24px;
+        padding: clamp(18px, 2.8vw, 34px);
+        overflow: visible
+      }
+
+      .manual-stage-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        overflow: visible
+      }
+
+      .manual-stage-item {
+        padding: 0 clamp(10px, 1.4vw, 22px);
+        grid-template-rows: 36px auto minmax(220px, 1fr);
+        overflow: visible
+      }
+
+      .manual-stage-number {
+        width: 28px;
+        height: 28px;
+        font-size: 12px
+      }
+
+      .manual-stage-item h3 {
+        font-size: 18px
+      }
+
+      .manual-stage-item p {
+        min-height: 44px;
+        margin: 8px 0 14px;
+        font-size: 14px;
+        line-height: 1.6
+      }
+
+      .manual-stage-art {
+        height: 260px
+      }
+
+      .manual-break-band {
+        grid-template-columns: minmax(240px, .9fr) 1fr;
+        height: auto;
+        padding: 16px 18px;
+        gap: 22px
+      }
+
+      .manual-break-copy {
+        grid-template-columns: 32px 1fr;
+        gap: 12px
+      }
+
+      .manual-break-mark {
+        width: 28px;
+        height: 28px;
+        font-size: 28px
+      }
+
+      .manual-break-copy b {
+        font-size: 15px
+      }
+
+      .manual-break-copy p {
+        font-size: 13px;
+        line-height: 1.5
+      }
+
+      .manual-break-flow {
+        height: 84px;
+        grid-template-columns: 1fr 24px 1fr 24px 1fr
+      }
+
+      .manual-mini-art {
+        height: 76px
+      }
+
+      .manual-practice-panel--two-column,
+      .manual-practice-panel--three-column {
+        display: grid;
+        gap: 0;
+        padding: clamp(18px, 2.8vw, 34px);
+        overflow: visible
+      }
+
+      .manual-practice-panel--two-column {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+      }
+
+      .manual-practice-panel--three-column {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px
+      }
+
+      .manual-practice-panel--two-column .manual-practice-card,
+      .manual-practice-panel--three-column .manual-practice-card {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        min-width: 0;
+        overflow: visible;
+        row-gap: 0
+      }
+
+      .manual-practice-panel--two-column .manual-practice-card:first-of-type {
+        padding-right: clamp(18px, 2.8vw, 34px)
+      }
+
+      .manual-practice-panel--two-column .manual-practice-card:last-child {
+        padding-left: clamp(18px, 2.8vw, 34px)
+      }
+
+      .manual-practice-panel--three-column .manual-practice-card {
+        padding: 0 10px
+      }
+
+      .manual-practice-head {
+        gap: 10px;
+        margin-bottom: 10px
+      }
+
+      .manual-practice-number {
+        width: 28px;
+        height: 28px;
+        font-size: 12px
+      }
+
+      .manual-practice-card h3 {
+        font-size: 18px
+      }
+
+      .manual-practice-goal {
+        height: auto;
+        min-height: 40px;
+        margin: 0 0 14px;
+        padding: 0;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.5
+      }
+
+      .manual-practice-art,
+      .manual-practice-panel--two-column .manual-practice-art {
+        height: 220px;
+        border-radius: 12px;
+        margin-bottom: 14px
+      }
+
+      .manual-practice-list,
+      .manual-practice-panel--two-column .manual-practice-list {
+        height: auto;
+        margin: 0 0 16px;
+        padding: 0 0 0 20px;
+        font-size: 14px;
+        line-height: 1.65
+      }
+
+      .manual-practice-list li {
+        margin: 0 0 7px;
+        padding-left: 2px
+      }
+
+      .manual-practice-tip,
+      .manual-practice-panel--two-column .manual-practice-tip {
+        height: auto;
+        min-height: 58px;
+        margin-top: auto;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 12px;
+        grid-template-columns: 30px 1fr;
+        gap: 10px;
+        background: #eef3f5
+      }
+
+      .manual-practice-panel--two-column .manual-practice-tip .manual-tip-icon {
+        width: 28px;
+        height: 28px
+      }
+
+      .manual-practice-panel--two-column .manual-practice-tip .manual-tip-icon svg {
+        width: 18px;
+        height: 18px
+      }
+
+      .manual-practice-tip p,
+      .manual-practice-panel--two-column .manual-practice-tip p {
+        font-size: 13px;
+        line-height: 1.45
+      }
+
+      .manual-dual-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: stretch;
+        gap: clamp(14px, 2vw, 24px)
+      }
+
+      .manual-dual-panel {
+        padding: clamp(18px, 2.4vw, 30px);
+        overflow: visible
+      }
+
+      .manual-chain-layout {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 18px
+      }
+
+      .manual-chain-main {
+        display: grid;
+        grid-template-columns: minmax(112px, .8fr) minmax(150px, 1.1fr) minmax(112px, .8fr);
+        gap: 14px;
+        align-items: stretch;
+        min-height: 320px
+      }
+
+      .manual-chain-frame {
+        width: 100%;
+        height: 100%;
+        min-width: 0;
+        aspect-ratio: auto;
+        align-self: stretch;
+        overflow: hidden;
+        border-radius: 12px;
+        background: #f1f3f3
+      }
+
+      .manual-chain-art,
+      .manual-chain-release {
+        object-fit: contain
+      }
+
+      .manual-chain-steps {
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, minmax(0, 1fr));
+        align-content: stretch;
+        gap: 0
+      }
+
+      .manual-chain-step:nth-child(n) {
+        grid-row: auto;
+        transform: none
+      }
+
+      .manual-chain-step {
+        display: flex;
+        align-items: flex-start;
+        gap: 7px;
+        min-width: 0
+      }
+
+      .manual-chain-number {
+        width: 24px;
+        height: 24px;
+        flex: 0 0 auto;
+        border-radius: 50%;
+        background: var(--orange);
+        color: #fff;
+        display: grid;
+        place-items: center;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 900
+      }
+
+      .manual-chain-step b,
+      .manual-chain-step span {
+        display: block;
+        font-size: 12px;
+        line-height: 1.4
+      }
+
+      .manual-chain-step b {
+        color: var(--navy);
+        font-size: 13px
+      }
+
+      .manual-tip-box {
+        display: grid;
+        grid-template-columns: 30px 1fr;
+        gap: 10px;
+        align-items: center;
+        padding: 12px 14px;
+        border-radius: 10px;
+        background: #eef3f5
+      }
+
+      .manual-tip-box .manual-tip-icon {
+        width: 28px;
+        height: 28px
+      }
+
+      .manual-tip-box p {
+        margin: 0;
+        font-size: 13px;
+        line-height: 1.5
+      }
+
+      .manual-compare-list {
+        height: auto;
+        display: grid;
+        gap: 18px
+      }
+
+      .manual-compare-row {
+        display: grid;
+        grid-template-columns: minmax(140px, .8fr) minmax(0, 1.2fr);
+        gap: 14px;
+        padding-bottom: 18px;
+        border-bottom: 1px dashed var(--line)
+      }
+
+      .manual-compare-row:last-child {
+        padding-bottom: 0;
+        border-bottom: 0
+      }
+
+      .manual-compare-copy h3 {
+        margin: 0 0 8px;
+        color: var(--navy);
+        font-size: 18px
+      }
+
+      .manual-compare-copy p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.6
+      }
+
+      .manual-compare-art {
+        grid-template-columns: minmax(0, 1fr) 22px minmax(0, 1fr);
+        gap: 5px;
+        align-items: center
+      }
+
+      .manual-wrist-art {
+        height: 120px;
+        border-radius: 8px
+      }
+
+      .manual-flow-arrow {
+        font-size: 18px
+      }
+
+      .manual-status-badge {
+        width: 28px;
+        height: 28px;
+        margin-bottom: 8px;
+        display: grid;
+        place-items: center;
+        border-radius: 8px;
+        background: #e7f1eb;
+        color: #2e7d52;
+        font-weight: 900
+      }
+
+      .is-negative .manual-status-badge {
+        background: #fbece9;
+        color: var(--red)
+      }
+
+      .manual-error-strip {
+        display: grid;
+        grid-template-columns: 1.2fr repeat(4, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 28px;
+        padding: 18px;
+        border-radius: 16px;
+        background: var(--navy);
+        color: #fff
+      }
+
+      .manual-error-title {
+        height: auto;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 800
+      }
+
+      .manual-warning-icon {
+        width: 26px;
+        height: 26px;
+        display: grid;
+        place-items: center;
+        border-radius: 7px;
+        background: var(--orange);
+        font-weight: 900
+      }
+
+      .manual-error-item {
+        height: auto;
+        display: grid;
+        grid-template-rows: 110px auto;
+        gap: 8px;
+        min-width: 0;
+        padding-left: 12px;
+        border-left: 1px solid rgba(255, 255, 255, .2)
+      }
+
+      .manual-error-art {
+        height: 110px;
+        border-radius: 8px;
+        object-fit: contain;
+        mix-blend-mode: normal;
+        background: #fff
+      }
+
+      .manual-error-item p {
+        margin: 0;
+        color: rgba(255, 255, 255, .8);
+        font-size: 12px;
+        line-height: 1.5
+      }
+
+      .manual-error-item p b {
+        display: block;
+        color: #fff
+      }
+
+      .manual-process-panel {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: clamp(14px, 2vw, 24px);
+        padding: clamp(18px, 2.8vw, 34px);
+        overflow: visible
+      }
+
+      .manual-process-step {
+        display: flex;
+        flex-direction: column;
+        min-width: 0
+      }
+
+      .manual-process-head {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 12px
+      }
+
+      .manual-process-number {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: var(--navy);
+        color: #fff;
+        display: grid;
+        place-items: center;
+        font-weight: 900
+      }
+
+      .manual-process-head h3 {
+        margin: 0;
+        color: var(--navy);
+        font-size: clamp(13px, 1.15vw, 16px);
+        letter-spacing: -.025em;
+        white-space: nowrap !important
+      }
+
+      .manual-process-art {
+        height: 190px;
+        border-radius: 10px;
+        overflow: hidden;
+        background: #f1f3f3
+      }
+
+      .manual-process-step p {
+        margin: 12px 0 0;
+        color: var(--muted);
+        font-size: 13px
+      }
+
+      .manual-table-panel {
+        padding: 0;
+        border-left: 0;
+        border-top-left-radius: 0;
+        overflow-x: auto
+      }
+
+      .manual-data-table {
+        width: 100%;
+        min-width: 760px;
+        border-collapse: collapse;
+        font-size: 13px;
+        line-height: 1.6
+      }
+
+      .manual-data-table th {
+        padding: 14px 16px;
+        background: var(--navy);
+        color: #fff;
+        text-align: left;
+        font-weight: 700
+      }
+
+      .manual-data-table th:first-child {
+        border-top-left-radius: 0
+      }
+
+      .manual-data-table td {
+        padding: 14px 16px;
+        border-top: 1px solid var(--line);
+        vertical-align: top
+      }
+
+      .manual-data-table tr:nth-child(even) td {
+        background: #f7f4ee
+      }
+
+      .manual-safety-note {
+        display: grid;
+        grid-template-columns: auto auto 1fr;
+        align-items: center;
+        gap: 12px;
+        margin-top: 20px;
+        padding: 16px 18px;
+        border: 1px solid #e4bbb2;
+        border-radius: 14px;
+        background: #fbece9;
+        color: var(--red)
+      }
+
+      .manual-safety-icon {
+        width: 28px;
+        height: 28px;
+        display: grid;
+        place-items: center;
+        border-radius: 8px;
+        background: var(--red);
+        color: #fff;
+        font-weight: 900
+      }
+
+      .manual-safety-note b {
+        font-size: 14px
+      }
+
+      .manual-safety-note span {
+        font-size: 13px;
+        line-height: 1.55
+      }
+
+      .manual-split-grid {
+        display: grid;
+        gap: clamp(14px, 2vw, 24px)
+      }
+
+      .manual-split-grid--progression {
+        grid-template-columns: minmax(240px, .8fr) minmax(0, 1.35fr)
+      }
+
+      .manual-split-grid--training {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+      }
+
+      .manual-split-grid--review {
+        grid-template-columns: minmax(0, 1.15fr) minmax(300px, .85fr)
+      }
+
+      .manual-split-panel {
+        position: relative;
+        min-width: 0;
+        padding: clamp(18px, 2.4vw, 30px);
+        overflow: visible
+      }
+
+      .manual-progression-list {
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: none;
+        align-content: start;
+        gap: 10px 22px
+      }
+
+      .manual-progression-step {
+        display: grid;
+        grid-template-columns: 44px 1fr;
+        gap: 10px;
+        align-items: center;
+        padding: 14px 0;
+        border-bottom: 1px dashed var(--line)
+      }
+
+      .manual-progression-number {
+        font-size: 16px;
+        color: var(--orange);
+        font-weight: 900;
+        line-height: 1
+      }
+
+      .manual-progression-step h3 {
+        margin: 0 0 4px;
+        color: var(--navy);
+        font-size: 16px
+      }
+
+      .manual-progression-step p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.5
+      }
+
+      .manual-signal-list {
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: none;
+        align-content: start;
+        gap: 14px 20px
+      }
+
+      .manual-signal-item {
+        display: grid;
+        grid-template-columns: 24px minmax(100px, .8fr) 1fr;
+        gap: 10px;
+        align-items: center;
+        padding: 12px 0;
+        border-bottom: 1px dashed var(--line)
+      }
+
+      .manual-signal-icon {
+        width: 22px;
+        height: 22px;
+        display: grid;
+        place-items: center;
+        border-radius: 6px;
+        background: #e7f1eb;
+        color: #2e7d52;
+        font-weight: 900
+      }
+
+      .manual-signal-art {
+        width: 100%;
+        max-width: 100%;
+        height: 100px;
+        overflow: hidden;
+        border-radius: 8px;
+        background: #f1f3f3
+      }
+
+      .manual-signal-item h3 {
+        margin: 0 0 5px;
+        color: var(--navy);
+        font-size: 14px
+      }
+
+      .manual-signal-item p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.5
+      }
+
+      .manual-bridge-panel {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: clamp(14px, 2vw, 24px);
+        padding: clamp(18px, 2.8vw, 34px);
+        overflow: visible
+      }
+
+      .manual-bridge-item {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        min-width: 0;
+        padding: 0 10px;
+        position: relative;
+        z-index: 0
+      }
+
+      .manual-bridge-item h3 {
+        margin: 0 0 12px;
+        color: var(--navy);
+        font-size: 16px;
+        line-height: 1.25
+      }
+
+      .manual-bridge-art {
+        flex: 0 0 auto;
+        height: 170px;
+        border-radius: 10px;
+        overflow: hidden;
+        background: #f1f3f3
+      }
+
+      .manual-bridge-item p {
+        position: relative;
+        z-index: 1;
+        margin: 10px 0 0;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.5
+      }
+
+      .manual-timeline-panel {
+        padding: clamp(18px, 2.8vw, 34px);
+        overflow: visible
+      }
+
+      .manual-timeline-bar {
+        height: 44px;
+        border-radius: 8px 8px 0 0
+      }
+
+      .manual-timeline-bar span {
+        font-size: 13px
+      }
+
+      .manual-timeline-labels {
+        height: auto;
+        min-height: 112px
+      }
+
+      .manual-timeline-labels div {
+        height: auto;
+        min-height: 112px;
+        padding: 16px 10px 12px
+      }
+
+      .manual-timeline-labels h3 {
+        font-size: 15px
+      }
+
+      .manual-timeline-labels p {
+        font-size: 12px;
+        line-height: 1.5
+      }
+
+      .manual-constraint-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: none;
+        align-content: start;
+        height: auto
+      }
+
+      .manual-constraint-item {
+        grid-template-columns: 40px max-content minmax(0, 1fr);
+        gap: 10px;
+        padding: 16px 12px
+      }
+
+      .manual-constraint-item b {
+        white-space: nowrap
+      }
+
+      .manual-constraint-item svg {
+        width: 30px;
+        height: 30px
+      }
+
+      .manual-constraint-item b {
+        font-size: 14px
+      }
+
+      .manual-constraint-item span {
+        font-size: 12px;
+        line-height: 1.45
+      }
+
+      .manual-module-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: none;
+        align-content: start;
+        height: auto
+      }
+
+      .manual-module-item {
+        grid-template-columns: 34px 1fr;
+        gap: 10px;
+        padding: 16px 12px
+      }
+
+      .manual-module-number {
+        width: 28px;
+        height: 28px;
+        font-size: 12px
+      }
+
+      .manual-module-item h3 {
+        font-size: 14px
+      }
+
+      .manual-module-item p {
+        font-size: 12px;
+        line-height: 1.45
+      }
+
+      .manual-record-list,
+      .manual-video-list {
+        height: auto;
+        grid-template-rows: none;
+        align-content: start
+      }
+
+      .manual-record-row {
+        grid-template-columns: minmax(92px, .5fr) 1fr;
+        padding: 15px 8px
+      }
+
+      .manual-record-row b,
+      .manual-record-result>b {
+        font-size: 14px
+      }
+
+      .manual-record-row span {
+        font-size: 13px;
+        line-height: 1.5
+      }
+
+      .manual-record-result {
+        grid-template-columns: minmax(92px, .5fr) 1fr;
+        padding: 15px 8px
+      }
+
+      .manual-check-grid {
+        gap: 8px 12px
+      }
+
+      .manual-check-item {
+        font-size: 12px
+      }
+
+      .manual-check-item i {
+        width: 14px;
+        height: 14px;
+        margin-right: 7px
+      }
+
+      .manual-video-question {
+        grid-template-columns: 28px 1fr;
+        gap: 10px;
+        padding: 15px 4px
+      }
+
+      .manual-question-number {
+        width: 24px;
+        height: 24px;
+        font-size: 11px
+      }
+
+      .manual-video-question h3 {
+        font-size: 14px
+      }
+
+      .manual-video-question p {
+        font-size: 12px;
+        line-height: 1.45
+      }
+
+      .manual-stop-note {
+        grid-template-columns: 80px 1fr;
+        margin-top: 14px;
+        padding: 12px;
+        font-size: 12px
+      }
+
+      .manual-philosophy-panel {
+        padding: 0;
+        overflow: visible
+      }
+
+      .manual-philosophy-list {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        height: auto
+      }
+
+      .manual-philosophy-item {
+        padding: 20px 16px
+      }
+
+      .manual-philosophy-item h3 {
+        font-size: 14px
+      }
+
+      .manual-philosophy-item p {
+        font-size: 12px;
+        line-height: 1.5
+      }
+
+      .manual-reference-panel {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        padding: clamp(18px, 2.8vw, 34px);
+        overflow: visible
+      }
+
+      .manual-reference-box {
+        padding: 16px;
+        font-size: 12px;
+        line-height: 1.65
+      }
+
+      .manual-source-note {
+        display: grid;
+        grid-template-columns: auto auto 1fr;
+        align-items: center;
+        gap: 12px;
+        margin-top: 20px;
+        padding: 16px 18px;
+        border: 1px solid rgba(16, 37, 63, .12);
+        border-radius: 14px;
+        background: #eef3f5
+      }
+
+      .manual-source-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 14px
+      }
+
+      .manual-source-note b {
+        font-size: 14px
+      }
+
+      .manual-source-note span {
+        font-size: 12px;
+        line-height: 1.55
+      }
+
+      @media (max-width:900px) {
+        .manual-tab-row,
+        #progression .manual-tab-row,
+        #review .manual-tab-row {
+          grid-template-columns: 1fr;
+          gap: 0
+        }
+
+        html[lang="en-US"] .manual-page-title {
+          font-size: clamp(18px, 4.8vw, 36px)
+        }
+
+        .document {
+          padding: 12px 12px 64px
+        }
+
+        .page {
+          margin-bottom: 40px
+        }
+
+        .manual-page {
+          padding-top: 24px
+        }
+
+        .manual-page-title {
+          font-size: clamp(28px, 7vw, 46px);
+          border-radius: 0 14px 14px 0
+        }
+
+        .manual-page-deck {
+          margin: 18px 0 28px;
+          font-size: 15px;
+          line-height: 1.7
+        }
+
+        .cover {
+          min-height: min(820px, 88dvh);
+          margin-bottom: 80px;
+          padding: 38px 24px 170px;
+          border-radius: 22px
+        }
+
+        .cover:after {
+          background: linear-gradient(160deg, rgba(16, 37, 63, .98) 0%, rgba(16, 37, 63, .78) 42%, rgba(16, 37, 63, .18) 100%)
+        }
+
+        .cover-art {
+          top: auto;
+          right: 2%;
+          bottom: 7%;
+          width: auto;
+          height: min(62%, 620px);
+          max-width: 70%;
+          max-height: 62%;
+          object-fit: contain
+        }
+
+        .cover-art .cover-court--wide {
+          display: none
+        }
+
+        .cover-art .cover-court--compact {
+          display: inline
+        }
+
+        .cover-illustration {
+          top: auto;
+          right: 2%;
+          bottom: 7%;
+          width: 70%;
+          height: auto;
+          max-height: 62%;
+          object-fit: contain
+        }
+
+        .cover-title-block {
+          width: 82%;
+          margin-top: 70px
+        }
+
+        .cover-title-block h1 {
+          font-size: clamp(44px, 11vw, 80px)
+        }
+
+        .cover-title-block .tagline {
+          margin-top: 22px;
+          padding-top: 14px;
+          font-size: 13px
+        }
+
+        .cover-feature-band {
+          left: 24px;
+          right: 24px;
+          bottom: 54px;
+          width: auto
+        }
+
+        .cover-footnote {
+          left: 24px;
+          bottom: 22px;
+          font-size: 10px
+        }
+
+        .cover-small {
+          right: 24px;
+          bottom: 22px;
+          max-width: 45%;
+          font-size: 10px
+        }
+
+        .manual-intro-panel {
+          grid-template-columns: 1fr;
+          gap: 20px
+        }
+
+        .manual-intro-art {
+          min-height: 220px
+        }
+
+        .manual-path-grid,
+        .manual-concept-grid {
+          grid-template-columns: 1fr 1fr
+        }
+
+        .manual-path-card:last-child,
+        .manual-concept-card:last-child {
+          grid-column: 1/-1
+        }
+
+        .manual-observation-panel {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 12px
+        }
+
+        .manual-observation-item {
+          border-right: 0
+        }
+
+        .manual-observation-item:nth-child(3) {
+          border-right: 0
+        }
+
+        .manual-observation-item:nth-child(n+4) {
+          margin-top: 8px
+        }
+
+        .manual-observation-panel .manual-observation-item:nth-child(4),
+        .manual-observation-panel .manual-observation-item:nth-child(5) {
+          grid-column: span 1
+        }
+
+        .manual-guide-summary {
+          grid-template-columns: auto 1fr;
+          padding: 16px
+        }
+
+        .manual-guide-summary-flow {
+          grid-column: 1/-1;
+          display: flex;
+          justify-content: space-between;
+          gap: 6px;
+          padding-top: 10px;
+          border-top: 1px dashed var(--line)
+        }
+
+        .manual-guide-summary-arrow {
+          display: none
+        }
+
+        .manual-summary-bar {
+          grid-template-columns: auto 1fr;
+          padding: 16px
+        }
+
+        .manual-summary-bar>span {
+          grid-column: 1/-1
+        }
+
+        .manual-stage-grid,
+        .manual-process-panel,
+        .manual-bridge-panel {
+          grid-template-columns: repeat(2, minmax(0, 1fr))
+        }
+
+        .manual-bridge-item {
+          grid-template-rows: none;
+          gap: 10px;
+          padding: 0 10px 24px;
+          border-right: 0;
+          border-bottom: 1px dashed var(--line)
+        }
+
+        .manual-bridge-item:last-child {
+          border-bottom: 0;
+          padding-bottom: 0
+        }
+
+        .manual-stage-item:nth-child(2) {
+          border-right: 0
+        }
+
+        .manual-stage-item:nth-child(3),
+        .manual-stage-item:nth-child(4) {
+          margin-top: 22px;
+          padding-top: 22px;
+          border-top: 1px dashed var(--line)
+        }
+
+        .manual-stage-art {
+          height: 220px
+        }
+
+        .manual-path-card:nth-child(2) {
+          padding-bottom: 42px
+        }
+
+        .manual-path-card:nth-child(2):after {
+          right: auto;
+          left: 50%;
+          top: auto;
+          bottom: 14px;
+          transform: translateX(-50%) rotate(90deg)
+        }
+
+        .manual-process-step:nth-child(2) {
+          padding-bottom: 28px
+        }
+
+        .manual-process-step:nth-child(2):after {
+          right: auto;
+          left: 50%;
+          top: auto;
+          bottom: 4px;
+          transform: translateX(-50%) rotate(90deg)
+        }
+
+        .manual-break-band {
+          grid-template-columns: 1fr
+        }
+
+        .manual-break-flow {
+          height: 74px
+        }
+
+        .manual-practice-panel--three-column,
+        .manual-dual-grid,
+        .manual-split-grid--progression,
+        .manual-split-grid--training,
+        .manual-split-grid--review {
+          grid-template-columns: 1fr
+        }
+
+        /* 窄屏按“标签 → 对应面板”阅读，避免右侧标签先于左侧面板出现。 */
+        #control {
+          display: flex;
+          flex-direction: column
+        }
+
+        #control > .manual-page-title {
+          order: 1
+        }
+
+        #control > .manual-page-deck {
+          order: 2
+        }
+
+        #control > .manual-tab-row,
+        #control > .manual-dual-grid {
+          display: contents
+        }
+
+        #control > .manual-tab-row .manual-tab:first-child {
+          order: 3
+        }
+
+        #control > .manual-dual-grid .manual-dual-panel:first-child {
+          order: 4
+        }
+
+        #control > .manual-tab-row .manual-tab:last-child {
+          order: 5
+        }
+
+        #control > .manual-dual-grid .manual-dual-panel:last-child {
+          order: 6
+        }
+
+        #control > .manual-tab--release-practice {
+          order: 7
+        }
+
+        #control > .manual-practice-panel {
+          order: 8
+        }
+
+        #control > .manual-error-strip {
+          order: 9
+        }
+
+        #control > .manual-summary-bar {
+          order: 10
+        }
+
+        #control > .manual-footer {
+          order: 11
+        }
+
+        .manual-practice-panel--two-column {
+          grid-template-columns: 1fr
+        }
+
+        .manual-practice-panel--two-column .manual-practice-card:first-of-type {
+          padding: 0 0 24px;
+          border-right: 0;
+          border-bottom: 1px dashed var(--line)
+        }
+
+        .manual-practice-panel--two-column .manual-practice-card:last-child {
+          padding: 24px 0 0
+        }
+
+        .manual-practice-panel--three-column .manual-practice-card {
+          padding: 0 0 24px;
+          border-bottom: 1px dashed var(--line)
+        }
+
+        .manual-practice-panel--three-column .manual-practice-card:last-child {
+          padding-bottom: 0;
+          border-bottom: 0
+        }
+
+        .manual-chain-main {
+          grid-template-columns: minmax(100px, .75fr) minmax(0, 1.2fr) minmax(100px, .75fr);
+          min-height: 300px
+        }
+
+        .manual-chain-steps {
+          grid-template-columns: 1fr;
+          grid-template-rows: repeat(6, minmax(0, 1fr));
+          gap: 0
+        }
+
+        .manual-compare-row {
+          grid-template-columns: 1fr
+        }
+
+        .manual-wrist-art {
+          height: 140px
+        }
+
+        .manual-error-strip {
+          grid-template-columns: 1fr 1fr
+        }
+
+        .manual-error-title {
+          grid-column: 1/-1;
+          padding-bottom: 8px
+        }
+
+        .manual-error-item:nth-child(3) {
+          border-left: 0
+        }
+
+        .manual-constraint-list,
+        .manual-module-list {
+          grid-template-columns: 1fr
+        }
+
+        .manual-signal-list {
+          grid-template-columns: 1fr
+        }
+
+        .manual-signal-item {
+          grid-template-columns: 24px 120px 1fr
+        }
+
+        .manual-philosophy-list {
+          grid-template-columns: 1fr 1fr
+        }
+
+        .manual-philosophy-item:nth-child(2) {
+          border-right: 0
+        }
+
+        .manual-philosophy-item:nth-child(n+3) {
+          border-top: 1px dashed var(--line)
+        }
+
+        .manual-philosophy-item:nth-child(4) {
+          border-right: 0
+        }
+
+        .manual-reference-panel {
+          grid-template-columns: 1fr
+        }
+
+        .manual-source-note {
+          grid-template-columns: auto 1fr
+        }
+
+        .manual-source-note span {
+          grid-column: 1/-1
+        }
+
+        .manual-timeline-labels {
+          grid-template-columns: 1fr
+        }
+
+        .manual-timeline-labels div {
+          min-height: 0;
+          padding: 12px;
+          text-align: left;
+          border-right: 0;
+          border-bottom: 1px dashed var(--line)
+        }
+
+        .manual-timeline-labels div:last-child {
+          border-bottom: 0
+        }
+      }
+
+      @media (max-width:560px) {
+        html[lang="en-US"] .manual-page-title {
+          font-size: clamp(16px, 4.2vw, 26px)
+        }
+
+        .language-switcher {
+          position: absolute;
+          top: 12px;
+          right: 12px
+        }
+
+        .language-switcher button {
+          min-width: 34px;
+          padding: 7px 6px
+        }
+
+        .cover {
+          min-height: 720px
+        }
+
+        .cover-art {
+          top: auto;
+          right: 14%;
+          bottom: 7%;
+          width: 70%;
+          height: auto;
+          max-width: 70%;
+          max-height: none
+        }
+
+        .cover-illustration {
+          right: 14%;
+          bottom: 7%;
+          width: 70%;
+          max-width: 70%;
+          max-height: 58%
+        }
+
+        .cover-title-block {
+          width: 100%;
+          margin-top: 64px
+        }
+
+        .cover-title-block h1 {
+          font-size: clamp(42px, 14vw, 68px)
+        }
+
+        html[lang="en-US"] .cover-title-block h1 {
+          font-size: clamp(36px, 11vw, 56px)
+        }
+
+        .cover-small {
+          display: none
+        }
+
+        .cover-footnote {
+          bottom: 22px
+        }
+
+        .cover-feature-band {
+          bottom: 62px;
+          height: 58px
+        }
+
+        .cover-feature {
+          font-size: 9px;
+          letter-spacing: .06em;
+          white-space: nowrap
+        }
+
+        .cover-feature svg {
+          width: 24px;
+          height: 24px
+        }
+
+        .manual-intro-copy {
+          padding-left: 48px
+        }
+
+        .manual-art-cover,
+        .manual-practice-art,
+        .manual-wrist-art {
+          object-fit: contain
+        }
+
+        .manual-path-grid,
+        .manual-concept-grid,
+        .manual-stage-grid,
+        .manual-process-panel,
+        .manual-bridge-panel {
+          grid-template-columns: 1fr
+        }
+
+        .manual-path-card:last-child,
+        .manual-concept-card:last-child {
+          grid-column: auto
+        }
+
+        .manual-path-card:not(:last-child) {
+          padding-bottom: 42px
+        }
+
+        .manual-path-card:not(:last-child):after {
+          display: block;
+          right: auto;
+          left: 50%;
+          top: auto;
+          bottom: 14px;
+          transform: translateX(-50%) rotate(90deg);
+        }
+
+        .manual-observation-panel {
+          grid-template-columns: repeat(2, 1fr);
+          padding: 12px 8px
+        }
+
+        .manual-observation-panel .manual-observation-item:nth-child(5) {
+          grid-column: 1/-1
+        }
+
+        .manual-observation-item:nth-child(n+3) {
+          margin-top: 0
+        }
+
+        .manual-observation-item {
+          grid-template-rows: auto auto
+        }
+
+        .manual-observation-figure {
+          height: auto;
+          aspect-ratio: 1
+        }
+
+        .manual-observation-item:nth-child(odd) {
+          border-right: 1px dashed var(--line)
+        }
+
+        .manual-observation-item:nth-child(5) {
+          border-right: 0
+        }
+
+        .manual-guide-summary-flow {
+          gap: 2px;
+          font-size: 11px
+        }
+
+        .manual-guide-summary-step svg {
+          width: 20px;
+          height: 20px
+        }
+
+        .manual-stage-item {
+          margin-top: 0 !important;
+          padding-top: 0 !important;
+          border-top: 0 !important;
+          border-right: 0 !important;
+          border-bottom: 1px dashed var(--line);
+          padding-bottom: 22px
+        }
+
+        .manual-stage-item:last-child {
+          border-bottom: 0;
+          padding-bottom: 0
+        }
+
+        .manual-stage-art {
+          height: 250px
+        }
+
+        .manual-process-step:not(:last-child) {
+          padding-bottom: 28px
+        }
+
+        .manual-process-step:not(:last-child):after {
+          right: auto;
+          left: 50%;
+          top: auto;
+          bottom: 4px;
+          transform: translateX(-50%) rotate(90deg);
+        }
+
+        .manual-practice-panel--two-column,
+        .manual-practice-panel--three-column,
+        .manual-dual-panel,
+        .manual-split-panel {
+          padding: 18px
+        }
+
+        .manual-chain-main {
+          display: flex;
+          flex-direction: column
+        }
+
+        .manual-chain-frame {
+          width: 100%;
+          height: auto;
+          max-height: 220px;
+          aspect-ratio: 16/10
+        }
+
+        .manual-chain-frame:last-child {
+          order: 3
+        }
+
+        .manual-tip-box {
+          height: auto;
+          min-height: 58px
+        }
+
+        .manual-chain-steps {
+          grid-template-columns: 1fr;
+          grid-template-rows: repeat(6, auto);
+          gap: 8px;
+          width: 100%
+        }
+
+        .manual-error-strip {
+          grid-template-columns: 1fr
+        }
+
+        .manual-error-title {
+          grid-column: auto
+        }
+
+        .manual-error-item,
+        .manual-error-item:nth-child(3) {
+          padding: 12px 0 0;
+          border-left: 0;
+          border-top: 1px solid rgba(255, 255, 255, .2)
+        }
+
+        .manual-signal-item {
+          grid-template-columns: 24px 100px 1fr;
+          gap: 8px
+        }
+
+        .manual-signal-art {
+          height: 88px
+        }
+
+        .manual-progression-list {
+          grid-template-columns: 1fr
+        }
+
+        .manual-philosophy-list {
+          grid-template-columns: 1fr
+        }
+
+        .manual-philosophy-item,
+        .manual-philosophy-item:nth-child(n+3) {
+          border-right: 0;
+          border-top: 0;
+          border-bottom: 1px dashed var(--line)
+        }
+
+        .manual-philosophy-item:last-child {
+          border-bottom: 0
+        }
+
+        .manual-record-row,
+        .manual-record-result {
+          grid-template-columns: 1fr;
+          gap: 6px
+        }
+
+        .manual-safety-note {
+          grid-template-columns: auto 1fr
+        }
+
+        .manual-safety-note span {
+          grid-column: 1/-1
+        }
+
+        .manual-page-deck {
+          padding-left: 14px
+        }
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div aria-label="语言选择" class="language-switcher" role="group">
+    <button aria-label="中文" aria-pressed="true" data-label-en="ZH" data-label-zh="中" data-lang="zh"
+      type="button">中</button>
+    <button aria-label="English" aria-pressed="false" data-label-en="EN" data-label-zh="EN" data-lang="en"
+      type="button">EN</button>
+  </div>
+  <!-- 页面复用的矢量图标。主要训练插图位于 assets/。 -->
+  <svg aria-hidden="true" focusable="false" height="0" style="position:absolute" width="0">
+    <defs>
+      <symbol id="icon-idea" viewBox="0 0 24 24">
+        <path
+          d="M9 18h6M10 21h4M8.5 15.5c-1.7-1.2-2.8-3.1-2.8-5.2A6.3 6.3 0 0 1 12 4a6.3 6.3 0 0 1 6.3 6.3c0 2.1-1.1 4-2.8 5.2-.8.6-1.1 1.1-1.1 1.8H9.6c0-.7-.3-1.2-1.1-1.8Z" />
+      </symbol>
+      <symbol id="icon-speed" viewBox="0 0 60 60">
+        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="5">
+          <path d="M5 16h28M5 30h38M5 44h24M35 18l14 12-14 12"></path>
+        </g>
+      </symbol>
+      <symbol id="icon-space" viewBox="0 0 60 60">
+        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="4">
+          <rect height="24" width="24" x="18" y="18"></rect>
+          <path d="M18 18L8 8m0 0h9M8 8v9M42 42l10 10m0 0h-9m9 0v-9"></path>
+        </g>
+      </symbol>
+      <symbol id="icon-pressure" viewBox="0 0 60 60">
+        <g fill="none" stroke="currentColor" stroke-width="4">
+          <circle cx="30" cy="30" r="12"></circle>
+          <circle cx="30" cy="30" r="4"></circle>
+          <path d="M30 3v12M30 45v12M3 30h12M45 30h12"></path>
+        </g>
+      </symbol>
+      <symbol id="icon-decision" viewBox="0 0 60 60">
+        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="4">
+          <path d="M30 52V28M30 28L15 12M30 28l15-16"></path>
+          <circle cx="15" cy="12" fill="currentColor" r="3"></circle>
+          <circle cx="45" cy="12" fill="currentColor" r="3"></circle>
+        </g>
+      </symbol>
+      <symbol id="icon-fatigue" viewBox="0 0 60 60">
+        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="4">
+          <path d="M12 38a20 20 0 1 1 36 0"></path>
+          <path d="M30 31l10-10"></path>
+          <circle cx="30" cy="31" fill="currentColor" r="3"></circle>
+        </g>
+      </symbol>
+    </defs>
+  </svg>
+  <main class="document" id="document">
+    <!-- PAGE 1 -->
+    <section aria-label="封面" class="page cover" data-page="1" id="cover">
+      <svg aria-hidden="true" class="cover-art" viewBox="0 0 210 297">
+        <defs>
+          <pattern height="4.4" id="cover-dots" patternUnits="userSpaceOnUse" width="4.4">
+            <circle cx="1" cy="1" fill="#d5dce2" r=".62"></circle>
+          </pattern>
+        </defs>
+        <!-- 赛事手册式页眉与装饰 -->
+        <path
+          d="M154 7h4l-2.8 4h-4zM161 7h4l-2.8 4h-4zM168 7h4l-2.8 4h-4zM175 7h4l-2.8 4h-4zM182 7h4l-2.8 4h-4zM189 7h4l-2.8 4h-4z"
+          fill="#061d3f"></path>
+        <!-- 单一场地轮廓：远端篮下基线经透视斜边连接人物所在的近端基线 -->
+        <polyline class="cover-court--wide" fill="none" points="20,205 50,205 166,257 220,257" stroke="#c95a24"
+          stroke-linecap="round" stroke-linejoin="round" stroke-width="3.6"></polyline>
+        <polyline class="cover-court--compact" fill="none" points="38,177 57,177 173,228 194,228" stroke="#c95a24"
+          stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></polyline>
+      </svg>
+      <img alt="原图青少年跳投、左移篮球与完整篮筐插画" class="cover-illustration" src="assets/cover-illustration.png?v=4">
+      <div class="cover-coach-label manual-copy">个人自主训练</div>
+      <div class="cover-title-block">
+        <h1><span class="manual-copy">青少年</span><span class="title-orange manual-copy">投篮技术</span><span
+            class="manual-copy">训练手册</span></h1>
+        <div class="tagline manual-copy">建立可控出手 · 形成稳定表现 · 实现比赛迁移</div>
+      </div>
+      <div class="cover-feature-band" aria-label="手册四项内容">
+        <div class="cover-feature"><svg aria-hidden="true" viewBox="0 0 40 40">
+            <circle cx="20" cy="20" fill="none" r="14" stroke="#fff"></circle>
+            <circle cx="20" cy="20" fill="none" r="6" stroke="#fff"></circle>
+            <path d="M20 3v8M20 29v8M3 20h8M29 20h8" fill="none" stroke="#fff"></path>
+          </svg><span class="manual-copy">技术</span></div>
+        <div class="cover-feature"><svg aria-hidden="true" viewBox="0 0 40 40">
+            <rect fill="none" height="27" rx="3" stroke="#fff" width="23" x="8.5" y="7"></rect>
+            <path d="M15 7V4h10v3M14 15h12M14 21h7M14 27h10" fill="none" stroke="#fff"></path>
+          </svg><span class="manual-copy">训练</span></div>
+        <div class="cover-feature"><svg aria-hidden="true" viewBox="0 0 40 40">
+            <circle cx="17" cy="17" fill="none" r="10" stroke="#fff"></circle>
+            <path d="M24 24l10 10M12 17h10M17 12v10" fill="none" stroke="#fff"></path>
+          </svg><span class="manual-copy">纠错</span></div>
+        <div class="cover-feature"><svg aria-hidden="true" viewBox="0 0 40 40">
+            <path d="M7 31l8-9 6 5 12-16M25 11h8v8" fill="none" stroke="#fff"></path>
+            <path d="M7 36h27" fill="none" stroke="#fff"></path>
+          </svg><span class="manual-copy">迁移</span></div>
+      </div>
+      <div class="cover-footnote manual-copy">青少年投篮技术训练手册（2026v1）· Felix Chen</div>
+      <div class="cover-small manual-copy">适用于青少年投篮基础建立、动作纠错与训练进阶</div>
+    </section>
+    <!-- PAGE 2 -->
+    <section aria-label="怎样使用这本手册" class="page manual-page manual-page--guide" data-page="2" id="guide">
+      <div class="manual-page-title manual-copy">怎样使用这本手册</div>
+      <div class="manual-page-deck manual-copy">本手册围绕“一段式出手”核心理念，帮助你理解原理、建立动作，并在训练与比赛中稳定运用。</div>
+
+      <section class="manual-intro-panel manual-panel">
+        <div class="manual-intro-copy">
+          <div class="manual-idea-icon" aria-hidden="true"><svg viewBox="0 0 24 24">
+              <use href="#icon-idea"></use>
+              <path d="M9.8 10.2 12 12l2.2-1.8M12 12v5" />
+            </svg></div>
+          <h2 class="manual-copy">不是标准动作模板</h2>
+          <p class="manual-copy">每个人的身体条件、持球位置与出手点不同，手型不必完全一样。不强求外观统一，但应避免妨碍顺畅发力、稳定方向与自然释放的动作。</p>
+        </div>
+        <div class="manual-intro-art"><img class="manual-art-cover" src="assets/p2-intro-01.png"
+            alt="两种不同但合理的持球手型，以及僵硬对称持球并用双手推球的错误示意"></div>
+      </section>
+
+      <div class="manual-tab manual-tab--path manual-copy">训练路径（三步走）</div>
+      <section class="manual-path-grid">
+        <article class="manual-path-card manual-panel">
+          <div class="manual-path-head">
+            <div class="manual-display-number manual-copy">01</div>
+            <h3 class="manual-copy">可控出手</h3>
+          </div>
+          <p class="manual-card-lead manual-copy">建立身体与球的可控性，形成稳定的出手结构。</p>
+          <div class="manual-path-body">
+            <div class="manual-path-art"><img class="manual-art-contain" src="assets/p2-path-01.png"
+                alt="身体平衡、稳定持球准备出手"></div>
+            <ul class="manual-tick-list">
+              <li class="manual-copy">姿势稳定</li>
+              <li class="manual-copy">节奏流畅</li>
+              <li class="manual-copy">出手自然</li>
+            </ul>
+          </div>
+        </article>
+        <article class="manual-path-card manual-panel">
+          <div class="manual-path-head">
+            <div class="manual-display-number manual-copy">02</div>
+            <h3 class="manual-copy">稳定表现</h3>
+          </div>
+          <p class="manual-card-lead manual-copy">在重复训练中保持一致性，减少失误与波动。</p>
+          <div class="manual-path-body">
+            <div class="manual-path-art"><img class="manual-art-contain" src="assets/p2-path-02.png"
+                alt="重复出手沿同一稳定轨迹运行"></div>
+            <ul class="manual-tick-list">
+              <li class="manual-copy">动作一致</li>
+              <li class="manual-copy">节奏稳定</li>
+              <li class="manual-copy">命中率提升</li>
+            </ul>
+          </div>
+        </article>
+        <article class="manual-path-card manual-panel">
+          <div class="manual-path-head">
+            <div class="manual-display-number manual-copy">03</div>
+            <h3 class="manual-copy">比赛迁移</h3>
+          </div>
+          <p class="manual-card-lead manual-copy">在移动、压力与对抗中运用技术，把能力带入比赛。</p>
+          <div class="manual-path-body">
+            <div class="manual-path-art"><img class="manual-art-contain" src="assets/p2-path-03.png"
+                alt="符合真实高度比例的篮筐前对抗跳投"></div>
+            <ul class="manual-tick-list">
+              <li class="manual-copy">快速决策</li>
+              <li class="manual-copy">对抗适应</li>
+              <li class="manual-copy">结果导向</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <div class="manual-tab manual-tab--concept manual-copy">三个核心概念</div>
+      <section class="manual-concept-grid">
+        <article class="manual-concept-card manual-panel">
+          <h3 class="manual-copy">发力时序｜一段式</h3>
+          <p class="manual-copy">下肢 → 核心 → 上肢 → 手指，一气呵成。</p>
+          <div class="manual-concept-art"><img class="manual-art-contain" src="assets/p2-concept-01.png"
+              alt="从屈膝、举球到随挥的连续发力时序"></div>
+        </article>
+        <article class="manual-concept-card manual-panel">
+          <h3 class="manual-copy">动力传导｜甩鞭感</h3>
+          <p class="manual-copy">力量像甩动鞭子一样通过抖动手腕发力。</p>
+          <div class="manual-concept-art"><img class="manual-art-contain" src="assets/p2-concept-02.png"
+              alt="力量从脚部经躯干和手臂传到指尖"></div>
+        </article>
+        <article class="manual-concept-card manual-panel">
+          <h3 class="manual-copy">方向与旋转｜侧腕／转腕</h3>
+          <p class="manual-copy">通过侧腕与转腕，让球自然朝向篮筐。</p>
+          <div class="manual-concept-art"><img class="manual-art-contain" src="assets/p2-concept-03.png"
+              alt="持球手型过渡到自然转腕释放"></div>
+        </article>
+      </section>
+
+      <div class="manual-tab manual-tab--observation manual-copy">五个观察关键词</div>
+      <section class="manual-observation-panel manual-panel">
+        <article class="manual-observation-item">
+          <div class="manual-observation-figure"><b class="manual-observation-key manual-copy">顺</b><img
+              class="manual-art-observation" src="assets/p2-observe-01.png" alt="手臂顺畅完成随挥"></div>
+          <p class="manual-copy">动作顺畅连贯</p>
+        </article>
+        <article class="manual-observation-item">
+          <div class="manual-observation-figure"><b class="manual-observation-key manual-copy">正</b><img
+              class="manual-art-observation" src="assets/p2-observe-02.png" alt="侧身站位，肩臂手延长线对准篮筐中心"></div>
+          <p class="manual-copy">侧身站位，球路对正</p>
+        </article>
+        <article class="manual-observation-item">
+          <div class="manual-observation-figure"><b class="manual-observation-key manual-copy">松</b><img
+              class="manual-art-observation" src="assets/p2-observe-03.png" alt="投篮手自然放松，同时保持稳定手型和必要支撑"></div>
+          <p class="manual-copy">手放松但有刚性</p>
+        </article>
+        <article class="manual-observation-item">
+          <div class="manual-observation-figure"><b class="manual-observation-key manual-copy">稳</b><img
+              class="manual-art-observation" src="assets/p2-observe-04.png" alt="重心位于双脚之间保持稳定"></div>
+          <p class="manual-copy">重心与节奏稳定</p>
+        </article>
+        <article class="manual-observation-item">
+          <div class="manual-observation-figure"><b class="manual-observation-key manual-copy">准</b><img
+              class="manual-art-observation" src="assets/p2-observe-05.png" alt="篮球沿正确方向落向篮筐中心"></div>
+          <p class="manual-copy">方向正确有趋势</p>
+        </article>
+      </section>
+
+      <section class="manual-guide-summary">
+        <div class="manual-idea-icon" aria-hidden="true"><svg viewBox="0 0 24 24">
+            <use href="#icon-idea"></use>
+          </svg></div>
+        <div class="manual-guide-summary-copy manual-copy"><b>记住：</b>原理 → 感觉 → 训练 → 验证 → 比赛。<br>坚持练习与复盘，你会建立属于自己的稳定出手。
+        </div>
+        <div class="manual-guide-summary-flow"><span class="manual-guide-summary-step"><svg viewBox="0 0 24 24">
+              <path d="M3 5c4-1 7 0 9 2v13c-2-2-5-3-9-2V5ZM21 5c-4-1-7 0-9 2v13c2-2 5-3 9-2V5Z" />
+            </svg><span class="manual-copy">原理</span></span><span class="manual-guide-summary-arrow">→</span><span
+            class="manual-guide-summary-step"><svg viewBox="0 0 24 24">
+              <path d="M8 19c-3-2-4-5-3-8 1-5 6-8 11-6 3 1 4 4 3 7-1 2-3 2-4 4-.4 1-.3 2-.2 3H8Z" />
+              <circle cx="10" cy="10" r="1" />
+            </svg><span class="manual-copy">感觉</span></span><span class="manual-guide-summary-arrow">→</span><span
+            class="manual-guide-summary-step"><svg viewBox="0 0 24 24">
+              <path d="M8 3h8l3 18H5L8 3ZM7 11h10" />
+            </svg><span class="manual-copy">训练</span></span><span class="manual-guide-summary-arrow">→</span><span
+            class="manual-guide-summary-step"><svg viewBox="0 0 24 24">
+              <rect x="5" y="3" width="14" height="18" rx="1" />
+              <path d="m8 9 2 2 4-4M8 15h7" />
+            </svg><span class="manual-copy">验证</span></span><span class="manual-guide-summary-arrow">→</span><span
+            class="manual-guide-summary-step"><svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="9" />
+              <path d="M3 12h18M12 3c3 3 4 6 4 9s-1 6-4 9M12 3c-3 3-4 6-4 9s1 6 4 9" />
+            </svg><span class="manual-copy">比赛</span></span></div>
+      </section>
+      <footer class="manual-footer"><span class="manual-author manual-copy">飞飞爸爸</span><span
+          class="manual-folio">02</span></footer>
+    </section>
+    <!-- PAGE 3 -->
+    <section aria-label="出手发力：一段式与发力链" class="page manual-page" data-page="3" id="stages">
+      <div class="manual-page-title manual-copy">出手发力：一段式与发力链</div>
+      <div class="manual-page-deck manual-copy"><b>核心要点：</b>从下肢蹬地到起球挥臂，再到压腕拨球，力量依次传递，动作连贯不断，形成一段式出手。</div>
+
+      <div class="manual-tab manual-tab--stage manual-copy">一段式投篮要点</div>
+      <section class="manual-stage-panel manual-panel">
+        <div class="manual-stage-grid">
+          <article class="manual-stage-item">
+            <div class="manual-stage-head"><span class="manual-stage-number">1</span>
+              <h3 class="manual-copy">准备</h3>
+            </div>
+            <p class="manual-copy">投篮侧脚稍前<br>身体自然侧向</p><img class="manual-art manual-stage-art"
+              src="assets/p3-stage-01.png" alt="球员双脚约与肩同宽、投篮侧脚稍前，身体自然侧向篮筐的准备姿势">
+          </article>
+          <article class="manual-stage-item">
+            <div class="manual-stage-head"><span class="manual-stage-number">2</span>
+              <h3 class="manual-copy">加载</h3>
+            </div>
+            <p class="manual-copy">屈膝下蹲<br>球于投篮口袋</p><img class="manual-art manual-stage-art"
+              src="assets/p3-stage-02.png" alt="球员屈膝下蹲，将球置于投篮口袋的加载姿势">
+          </article>
+          <article class="manual-stage-item">
+            <div class="manual-stage-head"><span class="manual-stage-number">3</span>
+              <h3 class="manual-copy">伸展</h3>
+            </div>
+            <p class="manual-copy">蹬地伸展<br>球随身体上升</p><img class="manual-art manual-stage-art"
+              src="assets/p3-stage-03.png" alt="球员蹬地伸展，篮球随身体上升到出手点">
+          </article>
+          <article class="manual-stage-item">
+            <div class="manual-stage-head"><span class="manual-stage-number">4</span>
+              <h3 class="manual-copy">释放</h3>
+            </div>
+            <p class="manual-copy">手臂伸展<br>压腕拨球</p><img class="manual-art manual-stage-art" src="assets/p3-stage-04.png"
+              alt="球员伸臂压腕，篮球刚离开指尖的释放瞬间">
+          </article>
+        </div>
+        <aside class="manual-break-band">
+          <div class="manual-break-copy">
+            <div class="manual-break-mark">×</div>
+            <div><b class="manual-copy">避免停住再投</b>
+              <p class="manual-copy">停顿会破坏发力链，影响出手速度与稳定性。</p>
+            </div>
+          </div>
+          <div class="manual-break-flow" aria-label="停顿错误动作的三幅小图"><img class="manual-art manual-mini-art"
+              src="assets/p3-break-08.png" alt="球员将篮球向上举起">
+            <div class="manual-flow-arrow">→</div><img class="manual-art manual-mini-art" src="assets/p3-break-09.png"
+              alt="球员在额前架球并停顿">
+            <div class="manual-flow-arrow">→</div><img class="manual-art manual-mini-art" src="assets/p3-break-10.png"
+              alt="球员停顿后重新推投">
+          </div>
+        </aside>
+      </section>
+
+      <div class="manual-tab manual-tab--power-practice manual-copy">推荐练习</div>
+      <section class="manual-practice-panel manual-practice-panel--two-column manual-panel">
+        <article class="manual-practice-card">
+          <div class="manual-practice-head"><span class="manual-practice-number">1</span>
+            <h3 class="manual-copy">近框流动投</h3>
+          </div>
+          <p class="manual-practice-goal manual-copy"><b>目的：</b>提升节奏感与连贯出手能力</p><img
+            class="manual-art manual-practice-art" src="assets/p3-practice-06.png" alt="球员沿路线移动到近框位置，以连贯节奏投篮">
+          <ul class="manual-practice-list">
+            <li class="manual-copy">从底线或侧翼出发，接球后一段式投篮。</li>
+            <li class="manual-copy">投中后跑到另一侧接球，继续完成投篮。</li>
+            <li class="manual-copy">节奏连贯，不停顿，保持出手流畅。</li>
+          </ul>
+          <div class="manual-practice-tip">
+            <div class="manual-tip-icon" aria-hidden="true"><svg viewBox="0 0 24 24">
+                <use href="#icon-idea"></use>
+              </svg></div>
+            <p class="manual-copy"><b>提示</b>专注“一步接球—起跳—出手”，保持流动与节奏。</p>
+          </div>
+        </article>
+        <article class="manual-practice-card">
+          <div class="manual-practice-head"><span class="manual-practice-number">2</span>
+            <h3 class="manual-copy">双手持球站投</h3>
+          </div>
+          <p class="manual-practice-goal manual-copy"><b>目的：</b>巩固完整动作与发力链条</p><img
+            class="manual-art manual-practice-art" src="assets/p3-practice-07.png" alt="球员从双手准备到伸展随挥，完成完整站立投篮">
+          <ul class="manual-practice-list">
+            <li class="manual-copy">双脚约与肩同宽，投篮侧脚稍前，身体自然侧向篮筐。</li>
+            <li class="manual-copy">每次出手都从准备开始，保持动作完整。</li>
+            <li class="manual-copy">建议自投自抢，连续完成投篮。</li>
+          </ul>
+          <div class="manual-practice-tip">
+            <div class="manual-tip-icon" aria-hidden="true"><svg viewBox="0 0 24 24">
+                <use href="#icon-idea"></use>
+              </svg></div>
+            <p class="manual-copy"><b>提示</b>下肢 → 核心 → 上肢 → 手指，确保发力链顺畅。</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="manual-summary-bar manual-summary-bar--guide">
+        <div class="manual-idea-icon" aria-hidden="true"><svg viewBox="0 0 24 24">
+            <use href="#icon-idea"></use>
+          </svg></div><b class="manual-copy">关键记忆</b><span class="manual-copy">蹬地发力 · 身体伸展 · 压腕拨球 · 动作连贯 · 保持平衡</span>
+      </section>
+      <footer class="manual-footer"><span class="manual-author manual-copy">飞飞爸爸</span><span
+          class="manual-folio">03</span></footer>
+    </section>
+    <!-- PAGE 4 -->
+    <section aria-label="发力控制：甩鞭感与转腕" class="page manual-page" data-page="4" id="control">
+      <div class="manual-page-title manual-copy">发力控制：甩鞭感与侧腕／转腕</div>
+      <div class="manual-page-deck manual-copy"><b>核心要点：</b>动力从下往上，连贯传递到指尖；出手时手腕自然向前转腕，形成甩鞭般的释放。</div>
+
+      <div class="manual-tab-row">
+        <div class="manual-tab manual-tab--chain manual-copy">发力链与甩鞭感</div>
+        <div class="manual-tab manual-tab--comparison manual-copy">自然转腕与错误侧甩</div>
+      </div>
+      <div class="manual-dual-grid">
+        <section class="manual-dual-panel manual-panel">
+          <div class="manual-chain-layout">
+            <div class="manual-chain-main">
+              <div class="manual-chain-frame"><img class="manual-art manual-chain-art manual-chain-load"
+                  src="assets/p4-chain-01.png" alt="球员屈膝蓄力，橙色箭头表示下肢开始向上发力"></div>
+              <div class="manual-chain-steps">
+                <div class="manual-chain-step"><i class="manual-chain-number">1</i>
+                  <div><b class="manual-copy">下肢蹬伸</b><span class="manual-copy">产生向上的力量</span></div>
+                </div>
+                <div class="manual-chain-step"><i class="manual-chain-number">2</i>
+                  <div><b class="manual-copy">躯干发力</b><span class="manual-copy">传递力量向上</span></div>
+                </div>
+                <div class="manual-chain-step"><i class="manual-chain-number">3</i>
+                  <div><b class="manual-copy">肩部带动</b><span class="manual-copy">向前上方发力</span></div>
+                </div>
+                <div class="manual-chain-step"><i class="manual-chain-number">4</i>
+                  <div><b class="manual-copy">肘部伸展</b><span class="manual-copy">加速球向前送出</span></div>
+                </div>
+                <div class="manual-chain-step"><i class="manual-chain-number">5</i>
+                  <div><b class="manual-copy">转腕压腕</b><span class="manual-copy">向前甩鞭释放</span></div>
+                </div>
+                <div class="manual-chain-step"><i class="manual-chain-number">6</i>
+                  <div><b class="manual-copy">指尖拨球</b><span class="manual-copy">控制方向与弧度</span></div>
+                </div>
+              </div>
+              <div class="manual-chain-frame"><img class="manual-art manual-chain-release" src="assets/p4-chain-02.png"
+                  alt="球员从脚尖到指尖完全伸展，分段箭头表示力量由下至上传递并完成转腕拨球"></div>
+            </div>
+            <aside class="manual-tip-box">
+              <div class="manual-tip-icon" aria-hidden="true"><svg viewBox="0 0 24 24">
+                  <use href="#icon-idea"></use>
+                </svg></div>
+              <p class="manual-copy"><b>提示</b>保持动作连贯，一气呵成：“从下到上，向前甩出，不是推出去”。</p>
+            </aside>
+          </div>
+        </section>
+
+        <section class="manual-dual-panel manual-panel">
+          <div class="manual-compare-list">
+            <article class="manual-compare-row is-positive">
+              <div class="manual-compare-copy">
+                <div class="manual-status-badge">✓</div>
+                <h3 class="manual-copy">可以允许</h3>
+                <p class="manual-copy"><b>自然转腕（正向释放）</b><br>手腕顺势向前转动，指尖指向篮筐，力量顺畅释放。</p>
+              </div>
+              <div class="manual-compare-art"><img class="manual-art manual-wrist-art is-before"
+                  src="assets/p4-wrist-natural-before.png" alt="正确释放前，篮球、手腕与前臂沿虚线对准上方篮筐">
+                <div class="manual-flow-arrow">→</div><img class="manual-art manual-wrist-art"
+                  src="assets/p4-wrist-natural-after.png" alt="正确释放后，手腕顺势前转，指尖仍沿虚线指向篮筐">
+              </div>
+            </article>
+            <article class="manual-compare-row is-negative">
+              <div class="manual-compare-copy">
+                <div class="manual-status-badge">×</div>
+                <h3 class="manual-copy">需要检查</h3>
+                <p class="manual-copy"><b>侧甩（横向偏出）</b><br>手腕向侧面甩出，力量横向流失，命中率下降。</p>
+              </div>
+              <div class="manual-compare-art"><img class="manual-art manual-wrist-art is-before"
+                  src="assets/p4-wrist-side-before.png" alt="错误释放前，前臂仍对准篮筐，但篮球与腕部已经横向偏离虚线">
+                <div class="manual-flow-arrow">→</div><img class="manual-art manual-wrist-art"
+                  src="assets/p4-wrist-side-after.png" alt="错误释放后，前臂轴线不变，手掌和指尖横向甩离篮筐方向">
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+
+      <div class="manual-tab manual-tab--release-practice manual-copy">对应练习</div>
+      <section class="manual-practice-panel manual-practice-panel--three-column manual-panel">
+        <article class="manual-practice-card">
+          <div class="manual-practice-head"><span class="manual-practice-number">1</span>
+            <h3 class="manual-copy">原地单手近投</h3>
+          </div>
+          <p class="manual-practice-goal manual-copy"><b>目的：</b>建立自然侧向站位、转腕与稳定弧线</p>
+          <img class="manual-art manual-practice-art" src="assets/p4-practice-01.png"
+            alt="球员在篮筐正面采用自然侧向站位，以投篮手完成原地单手近投">
+          <ul class="manual-practice-list">
+            <li class="manual-copy">位于篮筐正面 3–5 米，投篮侧脚稍前，身体自然侧向。</li>
+            <li class="manual-copy">球沿投篮侧向上举起，转腕后肩、臂、指尖一同朝向篮筐。</li>
+            <li class="manual-copy">观察旋转、弧线和落点是否稳定。</li>
+          </ul>
+          <div class="manual-practice-tip">
+            <div class="manual-tip-icon" aria-hidden="true"><svg viewBox="0 0 24 24">
+                <use href="#icon-idea"></use>
+              </svg></div>
+            <p class="manual-copy">用流畅转腕把球送出，不要用手臂硬推。</p>
+          </div>
+        </article>
+        <article class="manual-practice-card">
+          <div class="manual-practice-head"><span class="manual-practice-number">2</span>
+            <h3 class="manual-copy">左右手擦板终结</h3>
+          </div>
+          <p class="manual-practice-goal manual-copy"><b>目的：</b>练习两侧擦板角度与柔和手感</p>
+          <img class="manual-art manual-practice-art" src="assets/p4-practice-02.png"
+            alt="球员从篮筐侧面使用靠近篮筐的手，瞄准篮板目标点完成擦板终结">
+          <ul class="manual-practice-list">
+            <li class="manual-copy">篮筐两侧 1–2 米起步，使用靠近篮筐的一侧手完成终结。</li>
+            <li class="manual-copy">瞄准篮板，转腕轻柔送球擦板入筐。</li>
+            <li class="manual-copy">左右手交替练习并保持动作一致。</li>
+          </ul>
+          <div class="manual-practice-tip">
+            <div class="manual-tip-icon" aria-hidden="true"><svg viewBox="0 0 24 24">
+                <use href="#icon-idea"></use>
+              </svg></div>
+            <p class="manual-copy">先找准擦板点，再用转腕控制力量。</p>
+          </div>
+        </article>
+        <article class="manual-practice-card">
+          <div class="manual-practice-head"><span class="manual-practice-number">3</span>
+            <h3 class="manual-copy">对墙前上方出手</h3>
+          </div>
+          <p class="manual-practice-goal manual-copy"><b>目的：</b>固定出手方向，练习辅助手及时离球</p>
+          <img class="manual-art manual-practice-art" src="assets/p4-practice-03-v2.png"
+            alt="球员用投篮手沿前上方斜直线把球送向较高的墙面目标，辅助手退回胸前">
+          <ul class="manual-practice-list">
+            <li class="manual-copy">面对墙面目标站立，让球向前上方直线送出并接回。</li>
+            <li class="manual-copy">投篮手向前转腕，指尖始终对准墙面目标。</li>
+            <li class="manual-copy">辅助手在出球前离开篮球，不参与推球。</li>
+          </ul>
+          <div class="manual-practice-tip">
+            <div class="manual-tip-icon" aria-hidden="true"><svg viewBox="0 0 24 24">
+                <use href="#icon-idea"></use>
+              </svg></div>
+            <p class="manual-copy">先保证球走直线，再逐渐加快出手节奏。</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="manual-error-strip" aria-label="常见错误">
+        <div class="manual-error-title"><span class="manual-warning-icon">!</span><span class="manual-copy">常见错误</span>
+        </div>
+        <article class="manual-error-item"><img class="manual-art manual-error-art" src="assets/p4-error-01.png"
+            alt="球员侧甩出手，红色箭头表示力量向外偏移">
+          <p class="manual-copy"><b>侧甩出手</b>力量向外偏</p>
+        </article>
+        <article class="manual-error-item"><img class="manual-art manual-error-art" src="assets/p4-error-02.png"
+            alt="出手后手腕仍与前臂僵直，手指没有向下随挥，篮球缺少旋转">
+          <p class="manual-copy"><b>没有压腕</b>球缺少旋转</p>
+        </article>
+        <article class="manual-error-item"><img class="manual-art manual-error-art" src="assets/p4-error-03.png"
+            alt="球员双手僵硬向前推球，缺少自然转腕随挥">
+          <p class="manual-copy"><b>用力推球</b>缺乏甩鞭感</p>
+        </article>
+        <article class="manual-error-item"><img class="manual-art manual-error-art" src="assets/p4-error-04.png"
+            alt="辅助手从篮球侧面施力，红色箭头表示横向干扰">
+          <p class="manual-copy"><b>辅助手干扰</b>影响出手方向</p>
+        </article>
+      </section>
+
+      <section class="manual-summary-bar manual-summary-bar--guide">
+        <div class="manual-idea-icon" aria-hidden="true"><svg viewBox="0 0 24 24">
+            <use href="#icon-idea"></use>
+          </svg></div><b class="manual-copy">关键记忆</b><span class="manual-copy">下肢蹬伸 · 躯干传体 · 肩肘伸展 · 转腕压腕 · 指尖拨球 ·
+          自然发力</span>
+      </section>
+      <footer class="manual-footer"><span class="manual-author manual-copy">飞飞爸爸</span><span
+          class="manual-folio">04</span></footer>
+    </section>
+    <!-- PAGE 5 -->
+    <section aria-label="纠错流程" class="page manual-page" data-page="5" id="correction">
+      <div class="manual-page-title manual-copy">纠错：先找根因，再改动作</div>
+      <div class="manual-page-deck manual-copy"><b>核心原则：</b>纠错不是消灭个体差异，而是减少影响方向、平衡与可重复性的补偿。</div>
+
+      <div class="manual-tab manual-tab--process manual-copy">四步纠错流程</div>
+      <section class="manual-process-panel manual-panel">
+        <article class="manual-process-step">
+          <div class="manual-process-head"><span class="manual-process-number">1</span>
+            <h3 class="manual-copy">任务条件</h3>
+          </div>
+          <div class="manual-process-art"><img class="manual-art manual-process-image" src="assets/p5-process-01.png"
+              alt="距离、移动速度、疲劳和防守共同影响投篮任务"></div>
+          <p class="manual-copy">距离／速度／疲劳／防守</p>
+        </article>
+        <article class="manual-process-step">
+          <div class="manual-process-head"><span class="manual-process-number">2</span>
+            <h3 class="manual-copy">整体节奏</h3>
+          </div>
+          <div class="manual-process-art"><img class="manual-art manual-process-image" src="assets/p5-process-02.png"
+              alt="球员依次完成加载、伸展和释放三个连续阶段"></div>
+          <p class="manual-copy">加载—伸展—释放</p>
+        </article>
+        <article class="manual-process-step">
+          <div class="manual-process-head"><span class="manual-process-number">3</span>
+            <h3 class="manual-copy">球路与分工</h3>
+          </div>
+          <div class="manual-process-art"><img class="manual-art manual-process-image" src="assets/p5-process-03.png"
+              alt="投篮手顺线发力，辅助手及时离球并避免横向推球"></div>
+          <p class="manual-copy">横扫／辅助手介入</p>
+        </article>
+        <article class="manual-process-step">
+          <div class="manual-process-head"><span class="manual-process-number">4</span>
+            <h3 class="manual-copy">局部细节</h3>
+          </div>
+          <div class="manual-process-art"><img class="manual-art manual-process-image" src="assets/p5-process-04.png"
+              alt="放大观察投篮后的手腕和指尖释放细节"></div>
+          <p class="manual-copy">腕指表现与个体差异</p>
+        </article>
+      </section>
+
+      <div class="manual-tab manual-tab--table manual-copy">常见问题与首选处理</div>
+      <section class="manual-table-panel manual-panel">
+        <table class="manual-data-table">
+          <colgroup>
+            <col style="width:17.5%">
+            <col style="width:27.5%">
+            <col style="width:34%">
+            <col style="width:21%">
+          </colgroup>
+          <thead>
+            <tr>
+              <th class="manual-copy">表现</th>
+              <th class="manual-copy">优先检查</th>
+              <th class="manual-copy">首选处理</th>
+              <th class="manual-copy">对应练习</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="manual-copy">推射／弧线低</td>
+              <td class="manual-copy">距离是否过远；下肢是否参与；举球后是否停顿</td>
+              <td class="manual-copy">缩短距离，恢复一段式连续节奏与向前上延伸</td>
+              <td class="manual-copy">近框流动投、完整站投</td>
+            </tr>
+            <tr>
+              <td class="manual-copy">横甩／侧旋</td>
+              <td class="manual-copy">辅助手是否推动；手臂和球路是否横向</td>
+              <td class="manual-copy">降低力量要求，先改双手分工与顺线球路</td>
+              <td class="manual-copy">原地单手近投、对墙直线出手</td>
+            </tr>
+            <tr>
+              <td class="manual-copy">刻意猛甩／动作发硬</td>
+              <td class="manual-copy">是否把“甩鞭感”误解为主动压腕或抢力</td>
+              <td class="manual-copy">放松肩臂，恢复完整发力链，让腕指自然完成离球</td>
+              <td class="manual-copy">刷网投后接完整站投</td>
+            </tr>
+            <tr>
+              <td class="manual-copy">轻微转腕但球路稳定</td>
+              <td class="manual-copy">旋转轴、左右偏差和辅助手分工是否稳定</td>
+              <td class="manual-copy">不因外形差异强制纠正，继续观察长期趋势</td>
+              <td class="manual-copy">保持当前练习</td>
+            </tr>
+            <tr>
+              <td class="manual-copy">后仰／踢腿</td>
+              <td class="manual-copy">任务是否过难；起跳方向与落地是否失衡</td>
+              <td class="manual-copy">降低距离或速度，鼓励垂直起落和稳定落地，避免失控漂移、无法稳定落地或动作补偿</td>
+              <td class="manual-copy">站稳投、微跳投</td>
+            </tr>
+            <tr>
+              <td class="manual-copy">上下肢脱节</td>
+              <td class="manual-copy">加载、伸展与释放时序是否被切断</td>
+              <td class="manual-copy">慢速连续投，重新连接下肢、举球与末端释放</td>
+              <td class="manual-copy">口令投、站投—微跳交替</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="manual-safety-note"><span class="manual-safety-icon" aria-hidden="true">!</span><b
+          class="manual-copy">安全规则</b><span class="manual-copy">出现锐痛、加重的疼痛或疼痛导致动作改变时立即停止；反复或持续症状应接受专业评估。</span>
+      </section>
+      <footer class="manual-footer"><span class="manual-author manual-copy">飞飞爸爸</span><span
+          class="manual-folio">05</span></footer>
+    </section>
+    <!-- PAGE 6 -->
+    <section aria-label="从站投到跳投" class="page manual-page" data-page="6" id="progression">
+      <div class="manual-page-title manual-copy">从站投到跳投</div>
+      <div class="manual-page-deck manual-copy"><b>核心要点：</b>跳投不是另一套动作，而是把连续发力链、方向与自然释放带入起跳和落地。</div>
+
+      <div class="manual-tab-row">
+        <div class="manual-tab manual-tab--progression manual-copy">进阶能力</div>
+        <div class="manual-tab manual-tab--signals manual-copy">衔接练习</div>
+      </div>
+      <div class="manual-split-grid manual-split-grid--progression">
+        <section class="manual-split-panel manual-panel">
+          <div class="manual-progression-list">
+            <article class="manual-progression-step"><span class="manual-progression-number">01</span>
+              <div>
+                <h3 class="manual-copy">站投</h3>
+                <p class="manual-copy">稳定脚步下完成连续出手</p>
+              </div>
+            </article>
+            <article class="manual-progression-step"><span class="manual-progression-number">02</span>
+              <div>
+                <h3 class="manual-copy">微跳投</h3>
+                <p class="manual-copy">轻微离地连接下肢与释放</p>
+              </div>
+            </article>
+            <article class="manual-progression-step"><span class="manual-progression-number">03</span>
+              <div>
+                <h3 class="manual-copy">原地跳投</h3>
+                <p class="manual-copy">增加离地高度，不追求跳得更高</p>
+              </div>
+            </article>
+            <article class="manual-progression-step"><span class="manual-progression-number">04</span>
+              <div>
+                <h3 class="manual-copy">接球跳投</h3>
+                <p class="manual-copy">连接接球、脚步和出手</p>
+              </div>
+            </article>
+            <article class="manual-progression-step"><span class="manual-progression-number">05</span>
+              <div>
+                <h3 class="manual-copy">运球急停</h3>
+                <p class="manual-copy">加入减速、急停与重新对筐</p>
+              </div>
+            </article>
+            <article class="manual-progression-step"><span class="manual-progression-number">06</span>
+              <div>
+                <h3 class="manual-copy">移动接球</h3>
+                <p class="manual-copy">不同方向和速度中完成投篮</p>
+              </div>
+            </article>
+          </div>
+        </section>
+        <section class="manual-split-panel manual-panel">
+          <div class="manual-signal-list">
+            <article class="manual-signal-item"><span class="manual-signal-icon">✓</span>
+              <div class="manual-signal-art"><img class="manual-art manual-signal-image" src="assets/p6-signal-01.png"
+                  alt="同一球员由稳定站投过渡到轻微离地的微跳投，动作与球路保持一致"></div>
+              <div>
+                <h3 class="manual-copy">站投 → 微跳</h3>
+                <p class="manual-copy">多数出手无需推、甩或后仰；节奏与球路可重复。</p>
+              </div>
+            </article>
+            <article class="manual-signal-item"><span class="manual-signal-icon">✓</span>
+              <div class="manual-signal-art"><img class="manual-art manual-signal-image" src="assets/p6-signal-02.png"
+                  alt="球员从加载、空中释放到同线落地，起跳出手落地连成一体"></div>
+              <div>
+                <h3 class="manual-copy">微跳 → 跳投</h3>
+                <p class="manual-copy">起跳、出手、落地仍是一体；球路没有明显漂移。</p>
+              </div>
+            </article>
+            <article class="manual-signal-item"><span class="manual-signal-icon">✓</span>
+              <div class="manual-signal-art"><img class="manual-art manual-signal-image" src="assets/p6-signal-03.png"
+                  alt="球员接球后先稳定脚步与身体，再连贯举球完成跳投"></div>
+              <div>
+                <h3 class="manual-copy">跳投 → 接球</h3>
+                <p class="manual-copy">接球后能快速形成稳定身体组织，不仓促出手。</p>
+              </div>
+            </article>
+            <article class="manual-signal-item"><span class="manual-signal-icon">✓</span>
+              <div class="manual-signal-art"><img class="manual-art manual-signal-image" src="assets/p6-signal-04.png"
+                  alt="球员由快速移动减速急停，控制重心后垂直起跳并沿同一方向落地"></div>
+              <div>
+                <h3 class="manual-copy">增加移动／速度</h3>
+                <p class="manual-copy">急停后重心可控，速度增加后仍能控制方向与落地。</p>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+
+      <div class="manual-tab manual-tab--bridge manual-copy">进阶练习</div>
+      <section class="manual-bridge-panel manual-panel">
+        <article class="manual-bridge-item">
+          <h3 class="manual-copy">站投—微跳交替</h3>
+          <div class="manual-bridge-art"><img class="manual-art manual-bridge-image" src="assets/p6-bridge-01.png"
+              alt="球员在同一地面标记处交替完成站投与微跳投，并保持相同方向和落点"></div>
+          <p class="manual-copy">同一点位交替完成，比较节奏与落地。</p>
+        </article>
+        <article class="manual-bridge-item">
+          <h3 class="manual-copy">三连进阶</h3>
+          <div class="manual-bridge-art"><img class="manual-art manual-bridge-image" src="assets/p6-bridge-02.png"
+              alt="球员依次完成脚不离地的站投、轻微离地的微跳投和正常高度跳投"></div>
+          <p class="manual-copy">站投、微跳、原地跳投各一次。</p>
+        </article>
+        <article class="manual-bridge-item">
+          <h3 class="manual-copy">变距定点跳投</h3>
+          <div class="manual-bridge-art"><img class="manual-art manual-bridge-image" src="assets/p6-bridge-03.png"
+              alt="同一球员从篮筐近点逐步后退到中、远三个固定点位完成跳投，各次球路均稳定进入篮筐"></div>
+          <p class="manual-copy">从近到远设置三点，动作稳定后再后退。</p>
+        </article>
+        <article class="manual-bridge-item">
+          <h3 class="manual-copy">轻干扰跳投</h3>
+          <div class="manual-bridge-art"><img class="manual-art manual-bridge-image" src="assets/p6-bridge-04.png"
+              alt="干扰者站在投篮者前方并面朝投篮者，保持安全距离举手遮挡视线；投篮者垂直起跳并保持稳定入筐球路"></div>
+          <p class="manual-copy">同伴只举手遮挡，不封球不接触身体。</p>
+        </article>
+      </section>
+
+      <section class="manual-summary-bar">
+        <div class="manual-idea-icon" aria-hidden="true"><svg viewBox="0 0 24 24">
+            <use href="#icon-idea"></use>
+          </svg></div><b class="manual-copy">因人而异</b><span
+          class="manual-copy">离地后仍应保持连续发力链，但离球时点可以随距离、力量和防守调整；出手点明显过低的初学者可尝试接近起跳最高点，但不设唯一时点。</span>
+      </section>
+      <footer class="manual-footer"><span class="manual-author manual-copy">飞飞爸爸</span><span
+          class="manual-folio">06</span></footer>
+    </section>
+    <!-- PAGE 7 -->
+    <section aria-label="训练组织与比赛迁移" class="page manual-page" data-page="7" id="training">
+      <div class="manual-page-title manual-copy">训练组织与比赛迁移</div>
+      <div class="manual-page-deck manual-copy"><b>核心原则：</b>每堂课只保留一个主要技术问题，并只增加一个新变量。</div>
+
+      <div class="manual-tab manual-tab--timeline manual-copy">一堂60分钟训练示例</div>
+      <section class="manual-timeline-panel manual-panel">
+        <div class="manual-timeline-bar"><span class="manual-copy">8′</span><span class="manual-copy">15′</span><span
+            class="manual-copy">15′</span><span class="manual-copy">15′</span><span class="manual-copy">7′</span></div>
+        <div class="manual-timeline-labels">
+          <div>
+            <h3 class="manual-copy">准备</h3>
+            <p class="manual-copy">动态活动／近框轻投</p>
+          </div>
+          <div>
+            <h3 class="manual-copy">技术建立</h3>
+            <p class="manual-copy">只选节奏／释放／双手分工之一</p>
+          </div>
+          <div>
+            <h3 class="manual-copy">定点稳定</h3>
+            <p class="manual-copy">同条件记录多组表现</p>
+          </div>
+          <div>
+            <h3 class="manual-copy">情境迁移</h3>
+            <p class="manual-copy">只加入1个新变量</p>
+          </div>
+          <div>
+            <h3 class="manual-copy">复盘</h3>
+            <p class="manual-copy">录像／记录主问题</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="manual-tab-row">
+        <div class="manual-tab manual-tab--constraint manual-copy">一次只增加一个约束</div>
+        <div class="manual-tab manual-tab--module manual-copy">按目标轮换</div>
+      </div>
+      <div class="manual-split-grid manual-split-grid--training">
+        <section class="manual-split-panel manual-panel">
+          <div class="manual-constraint-list">
+            <article class="manual-constraint-item"><svg class="manual-constraint-icon--orange" viewBox="0 0 60 60">
+                <use href="#icon-speed"></use>
+              </svg><b class="manual-copy">速度</b><span class="manual-copy">缩短准备时间</span></article>
+            <article class="manual-constraint-item"><svg class="manual-constraint-icon--orange" viewBox="0 0 60 60">
+                <use href="#icon-space"></use>
+              </svg><b class="manual-copy">空间</b><span class="manual-copy">改变点位和接球方向</span></article>
+            <article class="manual-constraint-item"><svg class="manual-constraint-icon--orange" viewBox="0 0 60 60">
+                <use href="#icon-pressure"></use>
+              </svg><b class="manual-copy">干扰</b><span class="manual-copy">加入轻防守或时间限制</span></article>
+            <article class="manual-constraint-item"><svg class="manual-constraint-icon--navy" viewBox="0 0 60 60">
+                <use href="#icon-decision"></use>
+              </svg><b class="manual-copy">决策</b><span class="manual-copy">根据口令或防守决定投／不投</span></article>
+            <article class="manual-constraint-item"><svg class="manual-constraint-icon--navy" viewBox="0 0 60 60">
+                <use href="#icon-fatigue"></use>
+              </svg><b class="manual-copy">疲劳</b><span class="manual-copy">轻疲劳检验，不作为主要技术练习</span></article>
+          </div>
+        </section>
+        <section class="manual-split-panel manual-panel">
+          <div class="manual-module-list">
+            <article class="manual-module-item"><span class="manual-module-number">A</span>
+              <div>
+                <h3 class="manual-copy">技术建立</h3>
+                <p class="manual-copy">一段式节奏、末端释放、双手分工</p>
+              </div>
+            </article>
+            <article class="manual-module-item"><span class="manual-module-number">B</span>
+              <div>
+                <h3 class="manual-copy">定点稳定</h3>
+                <p class="manual-copy">多点站投、接球站稳</p>
+              </div>
+            </article>
+            <article class="manual-module-item"><span class="manual-module-number">C</span>
+              <div>
+                <h3 class="manual-copy">跳投衔接</h3>
+                <p class="manual-copy">站投—微跳—跳投</p>
+              </div>
+            </article>
+            <article class="manual-module-item"><span class="manual-module-number">D</span>
+              <div>
+                <h3 class="manual-copy">情境转化</h3>
+                <p class="manual-copy">急停、移动、轻防守、决策</p>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+
+      <section class="manual-summary-bar">
+        <div class="manual-idea-icon" aria-hidden="true"><svg viewBox="0 0 24 24">
+            <use href="#icon-idea"></use>
+          </svg></div><b class="manual-copy">由易到难</b><span class="manual-copy">定点站投 → 接球站稳 → 原地跳投 → 接球跳投 → 运球急停 → 移动接球 →
+          轻干扰 → 简单决策</span>
+      </section>
+      <footer class="manual-footer"><span class="manual-author manual-copy">飞飞爸爸</span><span
+          class="manual-folio">07</span></footer>
+    </section>
+    <!-- PAGE 8 -->
+    <section aria-label="评估复盘与参考依据" class="page manual-page" data-page="8" id="review">
+      <div class="manual-page-title manual-copy">评估与复盘</div>
+      <div class="manual-page-deck manual-copy"><b>核心原则：</b>用最少指标做正确判断：继续、进阶、退阶或停止。</div>
+
+      <div class="manual-tab-row">
+        <div class="manual-tab manual-tab--record manual-copy">最简训练记录</div>
+        <div class="manual-tab manual-tab--video manual-copy">录像只问四件事</div>
+      </div>
+      <div class="manual-split-grid manual-split-grid--review">
+        <section class="manual-split-panel manual-panel">
+          <div class="manual-record-list">
+            <div class="manual-record-row"><b class="manual-copy">任务条件</b><span
+                class="manual-copy">距离、点位、球号、篮高；是否接球、移动、干扰或疲劳。</span></div>
+            <div class="manual-record-row"><b class="manual-copy">结果趋势</b><span
+                class="manual-copy">命中、短长偏差和左右偏差在连续多组中的变化。</span></div>
+            <div class="manual-record-row"><b class="manual-copy">动作趋势</b><span
+                class="manual-copy">节奏是否连续、球路是否一致、身体是否平衡。</span></div>
+            <div class="manual-record-row"><b class="manual-copy">一个主问题</b><span
+                class="manual-copy">例如“扩距后后仰”或“辅助手介入过多”。</span></div>
+            <div class="manual-record-row"><b class="manual-copy">下一步调整</b><span
+                class="manual-copy">保持条件、增加一个变量，或退回前一难度。</span></div>
+            <div class="manual-record-result"><b class="manual-copy">本次结论</b>
+              <div class="manual-check-grid"><span class="manual-check-item"><i></i><span
+                    class="manual-copy">保持当前难度</span></span><span class="manual-check-item"><i></i><span
+                    class="manual-copy">增加一个变量</span></span><span class="manual-check-item"><i></i><span
+                    class="manual-copy">退回前一难度</span></span><span class="manual-check-item"><i></i><span
+                    class="manual-copy">立即停止</span></span></div>
+            </div>
+          </div>
+        </section>
+        <section class="manual-split-panel manual-panel">
+          <div class="manual-video-list">
+            <article class="manual-video-question"><span class="manual-question-number">1</span>
+              <div>
+                <h3 class="manual-copy">动作是否连续？</h3>
+                <p class="manual-copy">有没有明显停顿后再推。</p>
+              </div>
+            </article>
+            <article class="manual-video-question"><span class="manual-question-number">2</span>
+              <div>
+                <h3 class="manual-copy">球路是否一致？</h3>
+                <p class="manual-copy">方向和旋转轴是否大致稳定。</p>
+              </div>
+            </article>
+            <article class="manual-video-question"><span class="manual-question-number">3</span>
+              <div>
+                <h3 class="manual-copy">难度增加后是否平衡？</h3>
+                <p class="manual-copy">起跳、落地与身体组织是否可控。</p>
+              </div>
+            </article>
+            <article class="manual-video-question"><span class="manual-question-number">4</span>
+              <div>
+                <h3 class="manual-copy">球离手是否干净？</h3>
+                <p class="manual-copy">是否出现刻意猛甩、横向侧旋或辅助手推动。</p>
+              </div>
+            </article>
+            <div class="manual-stop-note"><b class="manual-copy">停止信号</b><span
+                class="manual-copy">疼痛、异常疲劳，或动作控制突然恶化。</span></div>
+          </div>
+        </section>
+      </div>
+
+      <div class="manual-tab manual-tab--philosophy manual-copy">训练理念</div>
+      <section class="manual-philosophy-panel manual-panel">
+        <div class="manual-philosophy-list">
+          <article class="manual-philosophy-item"><span class="manual-philosophy-number">1</span>
+            <div>
+              <h3 class="manual-copy">稳定后再进阶</h3>
+              <p class="manual-copy">先让节奏、球路与平衡可重复，再增加距离、速度或防守。</p>
+            </div>
+          </article>
+          <article class="manual-philosophy-item"><span class="manual-philosophy-number">2</span>
+            <div>
+              <h3 class="manual-copy">一次一个问题</h3>
+              <p class="manual-copy">先处理整体节奏与球路，再检查腕指等局部细节，切忌心急。</p>
+            </div>
+          </article>
+          <article class="manual-philosophy-item"><span class="manual-philosophy-number">3</span>
+            <div>
+              <h3 class="manual-copy">允许合理差异</h3>
+              <p class="manual-copy">不追求统一模板，只减少影响方向、平衡与重复性的补偿。</p>
+            </div>
+          </article>
+          <article class="manual-philosophy-item"><span class="manual-philosophy-number">4</span>
+            <div>
+              <h3 class="manual-copy">让反馈做决定</h3>
+              <p class="manual-copy">依据结果与动作趋势继续、进阶或退阶；疼痛时立即停止。</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <div class="manual-tab manual-tab--references manual-copy">参考资料</div>
+      <section class="manual-reference-panel manual-panel">
+        <div class="manual-reference-box manual-copy">1. França C, et al. The Jump Shot Performance in Youth Basketball:
+          A Systematic Review. <i>IJERPH</i>. 2021;18(6):3283.<br>2. Caseiro A, et al. Kinematic analysis of the
+          basketball jump shot with increasing shooting distance. <i>Acta Bioeng Biomech</i>. 2023;25(2):61–67.<br>3.
+          Kegler JJ, et al. The role of ball backspin alignment and variability in basketball shooting accuracy. <i>J
+            Sports Sci</i>. 2022;40(17):1925–1934.<br>4. Bergeron MF, et al. IOC consensus statement on youth athletic
+          development. <i>Br J Sports Med</i>. 2015;49:843–851.<br>5. FIBA / WABC. <i>Mini-Basketball Coaches
+            Manual</i>.</div>
+        <div class="manual-reference-box manual-copy">6. Australian Sports Commission &amp; Basketball Australia.
+          <i>Basketball Lesson Plans</i>.<br>7. FIBA / WABC. <i>Start Coaching: Activities Book</i>.<br>8. Zachry T, et
+          al. Increased movement accuracy and reduced EMG activity as the result of adopting an external focus of
+          attention. <i>Brain Res Bull</i>. 2005;67(4):304–309.<br>9. Guadagnoli MA, Lee TD. Challenge Point: A
+          framework for conceptualizing the effects of various practice conditions in motor learning. <i>J Mot
+            Behav</i>. 2004;36(2):212–224.</div>
+      </section>
+
+      <section class="manual-source-note"><span class="manual-source-icon" aria-hidden="true">i</span><b
+          class="manual-copy">说明</b><span class="manual-copy">1. 研究用于支持总体训练原则与边界，不替代对年龄、成熟度、疼痛／伤病和竞赛环境的现场评估。<br>2. FIBA与ASC均建议12岁以下儿童宜使用较小篮球和较低篮筐，可按个体情况调整。<br>3. 训练难度与进阶应依据个体表现动态调整，不替代教练结合动作质量和竞赛环境的现场判断。</span></section>
+      <footer class="manual-footer"><span class="manual-author manual-copy">飞飞爸爸</span><span
+          class="manual-folio">08</span></footer>
+    </section>
+  </main>
+  <script>
+    (function () {
+      const messages = {
+        "青少年投篮技术训练手册": "Youth Basketball Shooting Manual",
+        "语言选择": "Language",
+        "中文": "Chinese",
+        "中": "ZH",
+        "青少年": "Youth",
+        "投篮技术": "Shooting",
+        "训练手册": "Training Manual",
+        "建立可控出手 · 形成稳定表现 · 实现比赛迁移": "Control the shot · build consistency · transfer to games",
+        "技术": "Technique",
+        "训练": "Training",
+        "纠错": "Correction",
+        "迁移": "Transfer",
+        "青少年投篮技术训练手册（2026v1）· Felix Chen": "Youth Basketball Shooting Manual (2026v1) · Felix Chen",
+        "适用于青少年投篮基础建立、动作纠错与训练进阶": "For youth shooting fundamentals, form correction, and progression",
+        "怎样使用这本手册": "How to use this manual",
+        "本手册围绕“一段式出手”核心理念，帮助你理解原理、建立动作，并在训练与比赛中稳定运用。": "This manual centers on the one-motion shot: understand the principles, build the mechanics, and apply them consistently in practice and games.",
+        "不是标准动作模板": "No single form template",
+        "每个人的身体条件、持球位置与出手点不同，手型不必完全一样。不强求外观统一，但应避免妨碍顺畅发力、稳定方向与自然释放的动作。": "Every player differs in build, ball position, and release point. Hand position need not look identical. Don’t force a uniform look; avoid mechanics that disrupt smooth power transfer, shot line, or a natural release.",
+        "训练路径（三步走）": "Three-step training path",
+        "可控出手": "Controlled release",
+        "建立身体与球的可控性，形成稳定的出手结构。": "Control the body and ball to build a repeatable release.",
+        "姿势稳定": "Stable setup",
+        "节奏流畅": "Smooth rhythm",
+        "出手自然": "Natural release",
+        "稳定表现": "Consistent performance",
+        "在重复训练中保持一致性，减少失误与波动。": "Build consistency through repetition and reduce errors and variability.",
+        "动作一致": "Repeatable motion",
+        "节奏稳定": "Stable rhythm",
+        "命中率提升": "Higher shooting percentage",
+        "比赛迁移": "Game transfer",
+        "在移动、压力与对抗中运用技术，把能力带入比赛。": "Apply the skill on the move, under pressure, and through contact so it holds up in games.",
+        "快速决策": "Quick decisions",
+        "对抗适应": "Play through contact",
+        "结果导向": "Outcome-focused",
+        "三个核心概念": "Three core concepts",
+        "发力时序｜一段式": "Power sequence | One-motion",
+        "下肢 → 核心 → 上肢 → 手指，一气呵成。": "Legs → core → upper body → fingertips, all in one motion.",
+        "动力传导｜甩鞭感": "Power transfer | Whip-like release",
+        "力量像甩动鞭子一样通过抖动手腕发力。": "Power transfers like a whip, finishing with a quick wrist snap.",
+        "方向与旋转｜侧腕／转腕": "Line & spin | Wrist action",
+        "通过侧腕与转腕，让球自然朝向篮筐。": "Use natural wrist action to keep the ball on line to the rim.",
+        "五个观察关键词": "Five key cues",
+        "顺": "Flow",
+        "动作顺畅连贯": "Smooth, connected motion",
+        "正": "Line",
+        "侧身站位，球路对正": "Side-on stance; ball path on line",
+        "松": "Relax",
+        "手放松但有刚性": "Relaxed but structured hand",
+        "稳": "Balance",
+        "重心与节奏稳定": "Stable balance and rhythm",
+        "准": "Aim",
+        "方向正确有趋势": "Shot line on target",
+        "记住：": "Remember:",
+        "原理 → 感觉 → 训练 → 验证 → 比赛。": "Principle → feel → practice → check → game.",
+        "坚持练习与复盘，你会建立属于自己的稳定出手。": "Practice and review consistently to build a repeatable shot you can trust.",
+        "原理": "Principle",
+        "感觉": "Feel",
+        "验证": "Check",
+        "比赛": "Game",
+        "出手发力：一段式与发力链": "One-motion shooting & kinetic chain",
+        "核心要点：": "Key point: ",
+        "从下肢蹬地到起球挥臂，再到压腕拨球，力量依次传递，动作连贯不断，形成一段式出手。": "Drive from the floor, lift the ball, extend the arm, then snap the wrist and release through the fingertips—all in one continuous kinetic chain.",
+        "一段式投篮要点": "One-motion shooting cues",
+        "准备": "Setup",
+        "投篮侧脚稍前": "Shooting foot slightly forward",
+        "身体自然侧向": "Natural side-on stance",
+        "加载": "Load",
+        "屈膝下蹲": "Bend the knees",
+        "球于投篮口袋": "Ball in the shooting pocket",
+        "伸展": "Extension",
+        "蹬地伸展": "Drive up and extend",
+        "球随身体上升": "Ball rises with the body",
+        "释放": "Release",
+        "手臂伸展": "Extend the shooting arm",
+        "压腕拨球": "Wrist snap & fingertip release",
+        "避免停住再投": "No pause before release",
+        "停顿会破坏发力链，影响出手速度与稳定性。": "A pause breaks the kinetic chain, slowing the release and reducing consistency.",
+        "推荐练习": "Recommended drills",
+        "近框流动投": "Close-range flow shooting",
+        "目的：": "Goal:",
+        "提升节奏感与连贯出手能力": "Build rhythm and a fluid release",
+        "从底线或侧翼出发，接球后一段式投篮。": "Start on the baseline or wing; catch and shoot in one motion.",
+        "投中后跑到另一侧接球，继续完成投篮。": "After a make, move to the other side for the next catch-and-shoot.",
+        "节奏连贯，不停顿，保持出手流畅。": "No pause; keep the rhythm and release fluid.",
+        "提示": "Cue",
+        "专注“一步接球—起跳—出手”，保持流动与节奏。": "Step-in catch → jump → release; keep it fluid and rhythmic.",
+        "双手持球站投": "Two-hand form shooting",
+        "巩固完整动作与发力链条": "Reinforce the full motion and kinetic chain",
+        "双脚约与肩同宽，投篮侧脚稍前，身体自然侧向篮筐。": "Feet about shoulder-width, shooting foot slightly forward, body naturally side-on to the rim.",
+        "每次出手都从准备开始，保持动作完整。": "Start every rep from the setup and keep the motion continuous.",
+        "建议自投自抢，连续完成投篮。": "Rebound your own shots and keep the reps flowing.",
+        "下肢 → 核心 → 上肢 → 手指，确保发力链顺畅。": "Transfer force from the legs through the core to the fingertips.",
+        "关键记忆": "Key cues",
+        "蹬地发力 · 身体伸展 · 压腕拨球 · 动作连贯 · 保持平衡": "Drive from the floor · extend · wrist snap · fingertip release · stay connected · stay balanced",
+        "发力控制：甩鞭感与侧腕／转腕": "Power control: whip-like release & wrist action",
+        "动力从下往上，连贯传递到指尖；出手时手腕自然向前转腕，形成甩鞭般的释放。": "Power travels from the floor to the fingertips; let the wrist snap forward naturally for a whip-like release.",
+        "发力链与甩鞭感": "Kinetic chain & whip-like release",
+        "自然转腕与错误侧甩": "Natural wrist action vs. sideways flick",
+        "下肢蹬伸": "Lower-body drive",
+        "产生向上的力量": "Generate upward force",
+        "躯干发力": "Trunk drive",
+        "传递力量向上": "Transfer force upward",
+        "肩部带动": "Shoulder drive",
+        "向前上方发力": "Drive up and forward",
+        "肘部伸展": "Elbow extension",
+        "加速球向前送出": "Accelerate the ball forward",
+        "转腕压腕": "Wrist snap",
+        "向前甩鞭释放": "Whip through the release",
+        "指尖拨球": "Fingertip release",
+        "控制方向与弧度": "Control line and arc",
+        "保持动作连贯，一气呵成：“从下到上，向前甩出，不是推出去”。": "Keep it continuous: “from the floor up, whip it forward—don’t push it.”",
+        "可以允许": "Acceptable",
+        "自然转腕（正向释放）": "Natural wrist action",
+        "手腕顺势向前转动，指尖指向篮筐，力量顺畅释放。": "The wrist snaps forward naturally; fingertips point to the rim and power transfers cleanly.",
+        "需要检查": "Check",
+        "侧甩（横向偏出）": "Sideways wrist flick",
+        "手腕向侧面甩出，力量横向流失，命中率下降。": "The wrist flicks sideways, leaking force and reducing accuracy.",
+        "对应练习": "Drills",
+        "原地单手近投": "One-hand form shooting",
+        "建立自然侧向站位、转腕与稳定弧线": "Side-on setup, wrist action & arc control",
+        "位于篮筐正面 3–5 米，投篮侧脚稍前，身体自然侧向。": "Start 3–5 m in front of the rim, shooting foot slightly forward, body naturally side-on.",
+        "球沿投篮侧向上举起，转腕后肩、臂、指尖一同朝向篮筐。": "Lift the ball on the shooting side; through the wrist action, align the shoulder, arm, and fingertips with the rim.",
+        "观察旋转、弧线和落点是否稳定。": "Check for consistent spin, arc, and shot placement.",
+        "用流畅转腕把球送出，不要用手臂硬推。": "Use a smooth wrist snap; don’t push with the arm.",
+        "左右手擦板终结": "Bank Finishes - Both Hands",
+        "练习两侧擦板角度与柔和手感": "Train bank angles and soft touch on both sides",
+        "篮筐两侧 1–2 米起步，使用靠近篮筐的一侧手完成终结。": "Start 1–2 m from either side and finish with the hand nearest the rim.",
+        "瞄准篮板，转腕轻柔送球擦板入筐。": "Pick a backboard target and use a soft release to bank it in.",
+        "左右手交替练习并保持动作一致。": "Alternate hands; keep the mechanics consistent.",
+        "先找准擦板点，再用转腕控制力量。": "Find the bank target first, then control touch with the wrist.",
+        "对墙前上方出手": "Up-and-out wall drill",
+        "固定出手方向，练习辅助手及时离球": "Shot-line control; guide-hand timing",
+        "面对墙面目标站立，让球向前上方直线送出并接回。": "Face a wall target; send the ball straight up and forward, then catch it.",
+        "投篮手向前转腕，指尖始终对准墙面目标。": "Snap the shooting wrist forward; keep fingertips on the wall target.",
+        "辅助手在出球前离开篮球，不参与推球。": "The guide hand comes off before release and adds no force.",
+        "先保证球走直线，再逐渐加快出手节奏。": "Establish a straight ball path, then gradually quicken the release.",
+        "常见错误": "Common errors",
+        "侧甩出手": "Sideways wrist flick",
+        "力量向外偏": "Power leaks sideways",
+        "没有压腕": "No wrist snap",
+        "球缺少旋转": "Too little spin",
+        "用力推球": "Pushing the ball",
+        "缺乏甩鞭感": "No whip-like release",
+        "辅助手干扰": "Guide-hand interference",
+        "影响出手方向": "Pulls the shot off line",
+        "下肢蹬伸 · 躯干传体 · 肩肘伸展 · 转腕压腕 · 指尖拨球 · 自然发力": "Lower-body drive · trunk transfer · shoulder/elbow extension · wrist snap · fingertip release · natural power",
+        "纠错：先找根因，再改动作": "Correction: fix the root cause first",
+        "纠错不是消灭个体差异，而是减少影响方向、平衡与可重复性的补偿。": "Correct the compensations that hurt line, balance, and repeatability—not individual style.",
+        "四步纠错流程": "Four-step correction process",
+        "任务条件": "Task demands",
+        "距离／速度／疲劳／防守": "Distance / speed / fatigue / defense",
+        "整体节奏": "Overall rhythm",
+        "加载—伸展—释放": "Load → extend → release",
+        "球路与分工": "Ball path & hand roles",
+        "横扫／辅助手介入": "Cross-body sweep / guide-hand involvement",
+        "局部细节": "Fine details",
+        "腕指表现与个体差异": "Wrist/finger action & individual variation",
+        "常见问题与首选处理": "Common issues & first fixes",
+        "表现": "Issue",
+        "优先检查": "Check first",
+        "首选处理": "First fix",
+        "推射／弧线低": "Push shot / flat arc",
+        "距离是否过远；下肢是否参与；举球后是否停顿": "Too far? Legs contributing? Pause after the lift?",
+        "缩短距离，恢复一段式连续节奏与向前上延伸": "Move closer; restore one-motion rhythm and up-and-out extension.",
+        "近框流动投、完整站投": "Close-range flow shooting; full set shots",
+        "横甩／侧旋": "Sideways wrist flick / side spin",
+        "辅助手是否推动；手臂和球路是否横向": "Guide hand pushing? Arm or ball path moving sideways?",
+        "降低力量要求，先改双手分工与顺线球路": "Reduce force demand; fix hand roles and shot line first.",
+        "原地单手近投、对墙直线出手": "One-hand form shooting; straight-line wall releases",
+        "刻意猛甩／动作发硬": "Forced snap / stiff mechanics",
+        "是否把“甩鞭感”误解为主动压腕或抢力": "Mistaking the whip-like release for a forced wrist snap or extra effort?",
+        "放松肩臂，恢复完整发力链，让腕指自然完成离球": "Relax shoulders and arms; reconnect the kinetic chain and let the wrist/fingers finish naturally.",
+        "刷网投后接完整站投": "Swish shots → full set shots",
+        "轻微转腕但球路稳定": "Slight wrist action; stable ball path",
+        "旋转轴、左右偏差和辅助手分工是否稳定": "Spin axis, left/right misses, and guide-hand role stable?",
+        "不因外形差异强制纠正，继续观察长期趋势": "Don’t correct appearance alone; track the long-term trend.",
+        "保持当前练习": "Keep the current drill",
+        "后仰／踢腿": "Lean-back / leg kick",
+        "任务是否过难；起跳方向与落地是否失衡": "Task too hard? Takeoff/landing off balance?",
+        "降低距离或速度，鼓励垂直起落和稳定落地，避免失控漂移、无法稳定落地或动作补偿": "Reduce distance or speed; cue vertical takeoff and a balanced landing. Avoid uncontrolled drift or compensation.",
+        "站稳投、微跳投": "Balanced set shots; small-jump shooting",
+        "上下肢脱节": "Upper/lower-body disconnect",
+        "加载、伸展与释放时序是否被切断": "Is the load → extend → release sequence broken?",
+        "慢速连续投，重新连接下肢、举球与末端释放": "Slow down; reconnect the legs, ball lift, and release.",
+        "口令投、站投—微跳交替": "Callout shooting; set shot/small jump alternation",
+        "安全规则": "Safety rule",
+        "出现锐痛、加重的疼痛或疼痛导致动作改变时立即停止；反复或持续症状应接受专业评估。": "Stop immediately for sharp or worsening pain, or if pain changes the movement. Seek professional evaluation for recurring or persistent symptoms.",
+        "从站投到跳投": "From set shot to jump shot",
+        "跳投不是另一套动作，而是把连续发力链、方向与自然释放带入起跳和落地。": "A jump shot is not a separate motion; carry the same connected kinetic chain, shot line, and natural release through takeoff and landing.",
+        "进阶能力": "Progression stages",
+        "衔接练习": "Linking drills",
+        "站投": "Set shot",
+        "稳定脚步下完成连续出手": "Fluid release with stable feet",
+        "微跳投": "Small-jump shooting",
+        "轻微离地连接下肢与释放": "A small jump links lower-body drive to the release.",
+        "原地跳投": "Stationary jump shot",
+        "增加离地高度，不追求跳得更高": "Add lift without chasing height.",
+        "接球跳投": "Catch-and-shoot",
+        "连接接球、脚步和出手": "Link the catch, footwork, and release.",
+        "运球急停": "Dribble pull-up",
+        "加入减速、急停与重新对筐": "Add deceleration, a controlled stop, and re-square to the rim.",
+        "移动接球": "Catch on the move",
+        "不同方向和速度中完成投篮": "Shoot from different directions and speeds.",
+        "站投 → 微跳": "Set shot → small jump",
+        "多数出手无需推、甩或后仰；节奏与球路可重复。": "No push, sideways flick, or lean-back; keep rhythm and ball path repeatable.",
+        "微跳 → 跳投": "Small jump → jump shot",
+        "起跳、出手、落地仍是一体；球路没有明显漂移。": "Takeoff, release, and landing stay connected; ball path stays on line.",
+        "跳投 → 接球": "Jump shot → catch-and-shoot",
+        "接球后能快速形成稳定身体组织，不仓促出手。": "Organize the feet and body quickly after the catch without rushing.",
+        "增加移动／速度": "Add movement/speed",
+        "急停后重心可控，速度增加后仍能控制方向与落地。": "Stay balanced on the stop; keep the shot line and landing controlled as speed increases.",
+        "进阶练习": "Progression drills",
+        "站投—微跳交替": "Set shot ↔ small jump",
+        "同一点位交替完成，比较节奏与落地。": "Same spot; compare rhythm and landing.",
+        "三连进阶": "Three-step progression",
+        "站投、微跳、原地跳投各一次。": "Set shot → small jump → stationary jump shot.",
+        "变距定点跳投": "Variable-distance jump shots",
+        "从近到远设置三点，动作稳定后再后退。": "Use three spots from near to far; move back only when mechanics stay stable.",
+        "轻干扰跳投": "Lightly contested shots",
+        "同伴只举手遮挡，不封球不接触身体。": "Partner shows a hand only—no block attempt or body contact.",
+        "因人而异": "Individual variation",
+        "离地后仍应保持连续发力链，但离球时点可以随距离、力量和防守调整；出手点明显过低的初学者可尝试接近起跳最高点，但不设唯一时点。": "Keep the kinetic chain connected in the air; adjust release timing for distance, power, and defense. Beginners with a very low release can try releasing closer to the apex, but there is no single ideal timing.",
+        "训练组织与比赛迁移": "Practice design & game transfer",
+        "核心原则：": "Core principle: ",
+        "每堂课只保留一个主要技术问题，并只增加一个新变量。": "Keep one main technical focus per session and add only one new variable.",
+        "一堂60分钟训练示例": "Sample 60-minute practice",
+        "动态活动／近框轻投": "Dynamic warm-up / close-range shooting",
+        "技术建立": "Skill development",
+        "只选节奏／释放／双手分工之一": "Choose one: rhythm / release / hand roles",
+        "定点稳定": "Spot consistency",
+        "同条件记录多组表现": "Record multiple sets under identical conditions.",
+        "情境迁移": "Game transfer",
+        "只加入1个新变量": "Add one new variable only.",
+        "复盘": "Review",
+        "录像／记录主问题": "Video / log the main issue",
+        "一次只增加一个约束": "Add one constraint at a time",
+        "按目标轮换": "Rotate by objective",
+        "速度": "Speed",
+        "缩短准备时间": "Shorten setup time",
+        "空间": "Space",
+        "改变点位和接球方向": "Change spot and catch angle",
+        "干扰": "Pressure",
+        "加入轻防守或时间限制": "Add light defense or a time limit",
+        "决策": "Decision",
+        "根据口令或防守决定投／不投": "Decide whether to shoot from the call or defense.",
+        "疲劳": "Fatigue",
+        "轻疲劳检验，不作为主要技术练习": "Light fatigue check; not a primary skill drill.",
+        "一段式节奏、末端释放、双手分工": "One-motion rhythm, release, hand roles",
+        "多点站投、接球站稳": "Multi-spot set shots; balanced catches",
+        "跳投衔接": "Jump-shot progression",
+        "站投—微跳—跳投": "Set shot → small jump → jump shot",
+        "情境转化": "Game transfer",
+        "急停、移动、轻防守、决策": "Stops, movement, light contest, decisions",
+        "由易到难": "From simple to complex",
+        "定点站投 → 接球站稳 → 原地跳投 → 接球跳投 → 运球急停 → 移动接球 → 轻干扰 → 简单决策": "Spot set shot → balanced catch → stationary jump shot → catch-and-shoot → dribble pull-up → catch on the move → light contest → simple decision",
+        "评估与复盘": "Assessment & review",
+        "用最少指标做正确判断：继续、进阶、退阶或停止。": "Use the fewest useful measures to decide: maintain, progress, regress, or stop.",
+        "最简训练记录": "Minimal practice log",
+        "录像只问四件事": "Four video checks",
+        "距离、点位、球号、篮高；是否接球、移动、干扰或疲劳。": "Distance, spot, ball size, rim height; catch, movement, contest, fatigue.",
+        "结果趋势": "Outcome trend",
+        "命中、短长偏差和左右偏差在连续多组中的变化。": "Trends in makes, short/long misses, and left/right misses across sets.",
+        "动作趋势": "Movement trend",
+        "节奏是否连续、球路是否一致、身体是否平衡。": "Is the rhythm continuous, ball path consistent, and body balanced?",
+        "一个主问题": "One main issue",
+        "例如“扩距后后仰”或“辅助手介入过多”。": "For example, “leaning back at longer range” or “too much guide-hand involvement.”",
+        "下一步调整": "Next adjustment",
+        "保持条件、增加一个变量，或退回前一难度。": "Keep conditions, add one variable, or step back one level.",
+        "本次结论": "Session decision",
+        "保持当前难度": "Stay at current level",
+        "增加一个变量": "Add one variable",
+        "退回前一难度": "Step back one level",
+        "立即停止": "Stop immediately",
+        "动作是否连续？": "Is the motion continuous?",
+        "有没有明显停顿后再推。": "Any clear pause followed by a push?",
+        "球路是否一致？": "Is the ball path consistent?",
+        "方向和旋转轴是否大致稳定。": "Are shot direction and spin axis reasonably stable?",
+        "难度增加后是否平衡？": "Is balance maintained as difficulty rises?",
+        "起跳、落地与身体组织是否可控。": "Are takeoff, landing, and body control stable?",
+        "球离手是否干净？": "Is the release clean?",
+        "是否出现刻意猛甩、横向侧旋或辅助手推动。": "Any forced snap, side spin, or guide-hand push?",
+        "停止信号": "Stop signs",
+        "疼痛、异常疲劳，或动作控制突然恶化。": "Pain, unusual fatigue, or a sudden loss of movement control.",
+        "训练理念": "Training principles",
+        "稳定后再进阶": "Progress only after consistency",
+        "先让节奏、球路与平衡可重复，再增加距离、速度或防守。": "Make rhythm, ball path, and balance repeatable before adding range, speed, or defense.",
+        "一次一个问题": "One issue at a time",
+        "先处理整体节奏与球路，再检查腕指等局部细节，切忌心急。": "Fix overall rhythm and ball path before wrist/finger details; don’t rush.",
+        "允许合理差异": "Allow functional variation",
+        "不追求统一模板，只减少影响方向、平衡与重复性的补偿。": "Don’t chase one template; reduce compensations that hurt line, balance, or repeatability.",
+        "让反馈做决定": "Let feedback guide progression",
+        "依据结果与动作趋势继续、进阶或退阶；疼痛时立即停止。": "Use outcomes and movement trends to maintain, progress, or regress; stop if there is pain.",
+        "参考资料": "References",
+        "说明": "Notes",
+        "1. 研究用于支持总体训练原则与边界，不替代对年龄、成熟度、疼痛／伤病和竞赛环境的现场评估。": "1. Research supports general training principles and limits; it does not replace in-person assessment of age, maturity, pain/injury, or competition context.",
+        "2. FIBA与ASC均建议12岁以下儿童宜使用较小篮球和较低篮筐，可按个体情况调整。": "2. FIBA and ASC recommend smaller balls and lower rims for children under 12; adjust for the individual player.",
+        "3. 训练难度与进阶应依据个体表现动态调整，不替代教练结合动作质量和竞赛环境的现场判断。": "3. Adjust difficulty and progression to individual performance; this does not replace a coach’s in-person judgment of movement quality and competition context.",
+        "Felix Chen": "Felix Chen",
+        "封面": "Cover",
+        "发力控制：甩鞭感与转腕": "Power control: whip-like release & wrist action",
+        "纠错流程": "Correction process",
+        "评估复盘与参考依据": "Assessment, review & references",
+        "手册四项内容": "Four parts of the manual",
+        "停顿错误动作的三幅小图": "Three frames of an incorrect paused shot",
+        "两种不同但合理的持球手型，以及僵硬对称持球并用双手推球的错误示意": "Two different but functional ball positions, plus an incorrect stiff, symmetrical two-hand push",
+        "身体平衡、稳定持球准备出手": "Balanced setup with stable ball control",
+        "重复出手沿同一稳定轨迹运行": "Repeated shots following the same path",
+        "符合真实高度比例的篮筐前对抗跳投": "Realistically scaled contested jumper near the rim",
+        "从屈膝、举球到随挥的连续发力时序": "Continuous power sequence from knee bend and ball lift to follow-through",
+        "力量从脚部经躯干和手臂传到指尖": "Power transferring from the feet through the trunk and arm to the fingertips",
+        "持球手型过渡到自然转腕释放": "Ball position transitioning into a natural wrist release",
+        "手臂顺畅完成随挥": "Smooth arm follow-through",
+        "侧身站位，肩臂手延长线对准篮筐中心": "Side-on stance with shoulder, arm, and hand aligned to the center of the rim",
+        "投篮手自然放松，同时保持稳定手型和必要支撑": "Keep the shooting hand relaxed but structurally stable.",
+        "重心位于双脚之间保持稳定": "Center of mass balanced between the feet",
+        "篮球沿正确方向落向篮筐中心": "Ball traveling on line to the center of the rim",
+        "球员双脚约与肩同宽、投篮侧脚稍前，身体自然侧向篮筐的准备姿势": "Player in a shoulder-width stance, shooting foot slightly forward, body naturally side-on to the rim",
+        "球员屈膝下蹲，将球置于投篮口袋的加载姿势": "Player loading with knees bent and ball in the shooting pocket",
+        "球员蹬地伸展，篮球随身体上升到出手点": "Player driving up as the ball rises to the release point",
+        "球员伸臂压腕，篮球刚离开指尖的释放瞬间": "Player extending the arm and snapping the wrist as the ball leaves the fingertips",
+        "球员将篮球向上举起": "Player lifting the ball",
+        "球员在额前架球并停顿": "Player pausing with the ball set near the forehead",
+        "球员停顿后重新推投": "Player pushing the shot after the pause",
+        "球员沿路线移动到近框位置，以连贯节奏投篮": "Player moving into close range and shooting in a fluid rhythm",
+        "球员从双手准备到伸展随挥，完成完整站立投篮": "Player completing a full set shot from two-hand setup through extension and follow-through",
+        "球员屈膝蓄力，橙色箭头表示下肢开始向上发力": "Player loading through the knees; orange arrow shows upward lower-body drive",
+        "球员从脚尖到指尖完全伸展，分段箭头表示力量由下至上传递并完成转腕拨球": "Player fully extended from toes to fingertips; segmented arrows show bottom-up force transfer through the wrist snap and fingertip release",
+        "正确释放前，篮球、手腕与前臂沿虚线对准上方篮筐": "Before a correct release, ball, wrist, and forearm align with the dashed shot line to the rim",
+        "正确释放后，手腕顺势前转，指尖仍沿虚线指向篮筐": "After a correct release, the wrist snaps forward naturally and the fingertips stay on the shot line",
+        "错误释放前，前臂仍对准篮筐，但篮球与腕部已经横向偏离虚线": "Before an incorrect release, forearm stays aimed at the rim while ball and wrist drift off the shot line",
+        "错误释放后，前臂轴线不变，手掌和指尖横向甩离篮筐方向": "After an incorrect release, forearm axis stays fixed while palm and fingertips flick sideways off line",
+        "球员在篮筐正面采用自然侧向站位，以投篮手完成原地单手近投": "Player using a natural side-on stance in front of the rim for a one-hand form shot",
+        "球员从篮筐侧面使用靠近篮筐的手，瞄准篮板目标点完成擦板终结": "Player finishing from the side with the hand nearest the rim, aiming at a backboard target",
+        "球员用投篮手沿前上方斜直线把球送向较高的墙面目标，辅助手退回胸前": "Player sends the ball up and forward to a high wall target with the shooting hand while the guide hand returns to the chest",
+        "球员侧甩出手，红色箭头表示力量向外偏移": "Player flicks the wrist sideways; red arrow shows force leaking outward",
+        "出手后手腕仍与前臂僵直，手指没有向下随挥，篮球缺少旋转": "Wrist and forearm stay stiff after release; fingers do not finish down and the ball has little spin",
+        "球员双手僵硬向前推球，缺少自然转腕随挥": "Player stiffly pushes with both hands instead of a natural wrist snap and follow-through",
+        "辅助手从篮球侧面施力，红色箭头表示横向干扰": "Guide hand adds side force; red arrow shows lateral interference",
+        "距离、移动速度、疲劳和防守共同影响投篮任务": "Distance, movement speed, fatigue, and defense all affect the shot task",
+        "球员依次完成加载、伸展和释放三个连续阶段": "Player moves through the connected load → extend → release phases",
+        "投篮手顺线发力，辅助手及时离球并避免横向推球": "Shooting hand drives on line while the guide hand releases without adding side force",
+        "放大观察投篮后的手腕和指尖释放细节": "Close-up of wrist snap and fingertip release",
+        "同一球员由稳定站投过渡到轻微离地的微跳投，动作与球路保持一致": "Same player progressing from a stable set shot to shooting with a small jump while keeping mechanics and ball path consistent",
+        "球员从加载、空中释放到同线落地，起跳出手落地连成一体": "Player connects the load, airborne release, and on-line landing in one motion",
+        "球员接球后先稳定脚步与身体，再连贯举球完成跳投": "After the catch, player sets the feet and body before flowing into the jump shot",
+        "球员由快速移动减速急停，控制重心后垂直起跳并沿同一方向落地": "Player decelerates from speed, controls balance, jumps vertically, and lands on the same line",
+        "同一球员在同一地面标记处交替完成站投与微跳投，并保持相同方向和落点": "Same player alternates set shots and shots with a small jump from one floor mark, keeping the same line and landing spot",
+        "球员依次完成脚不离地的站投、轻微离地的微跳投和正常高度跳投": "Player performs a set shot, a shot with a small jump, and a full jump shot in sequence",
+        "同一球员从篮筐近点逐步后退到中、远三个固定点位完成跳投，各次球路均稳定进入篮筐": "Same player moves from near to mid to far spots, keeping a stable ball path on each jumper",
+        "干扰者站在投篮者前方并面朝投篮者，保持安全距离举手遮挡视线；投篮者垂直起跳并保持稳定入筐球路": "Defender shows a hand from a safe distance; shooter jumps vertically and keeps the shot on line",
+        "个人自主训练": "Individual Training Guide",
+        "原图青少年跳投、左移篮球与完整篮筐插画": "Original illustration: youth jump shot, ball moving left, full hoop",
+        "球员在同一地面标记处交替完成站投与微跳投，并保持相同方向和落点": "Player alternates set shots and shots with a small jump from one floor mark, keeping the same line and landing spot"
+      };
+      const records = [];
+      const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+      let node;
+      while (node = walker.nextNode()) {
+        if (node.parentElement?.closest('script,style')) continue;
+        const key = node.nodeValue.trim();
+        if (!key || !Object.prototype.hasOwnProperty.call(messages, key)) continue;
+        const start = node.nodeValue.indexOf(key);
+        records.push({ node, key, prefix: node.nodeValue.slice(0, start), suffix: node.nodeValue.slice(start + key.length) });
+      }
+      const attributes = [];
+      document.querySelectorAll('[alt],[aria-label],[title]').forEach(el => {
+        ['alt', 'aria-label', 'title'].forEach(name => {
+          const key = el.getAttribute(name);
+          if (key && Object.prototype.hasOwnProperty.call(messages, key)) attributes.push({ el, name, key });
+        });
+      });
+      const applyLanguage = lang => {
+        const english = lang === 'en';
+        records.forEach(({ node, key, prefix, suffix }) => { if (node.isConnected) node.nodeValue = prefix + (english ? messages[key] : key) + suffix; });
+        attributes.forEach(({ el, name, key }) => el.setAttribute(name, english ? messages[key] : key));
+        document.documentElement.lang = english ? 'en-US' : 'zh-CN';
+        document.title = english ? 'Youth Basketball Shooting Skills Manual' : '青少年投篮技术训练手册';
+        const description = document.querySelector('meta[name="description"]');
+        if (description) description.setAttribute('content', english ? 'Youth basketball shooting skills and training manual' : '青少年投篮技术与训练手册');
+        const switcher = document.querySelector('.language-switcher');
+        if (switcher) switcher.setAttribute('aria-label', english ? 'Language' : '语言选择');
+        document.querySelectorAll('.language-switcher [data-lang]').forEach(button => {
+          const active = button.dataset.lang === lang;
+          button.setAttribute('aria-pressed', String(active));
+          button.setAttribute('aria-label', button.dataset.lang === 'en' ? 'English' : (english ? 'Chinese' : '中文'));
+          button.textContent = english ? button.dataset.labelEn : button.dataset.labelZh;
+        });
+      };
+      document.querySelectorAll('.language-switcher [data-lang]').forEach(button => {
+        button.addEventListener('click', () => {
+          const lang = button.dataset.lang;
+          try { localStorage.setItem('shooting-manual-language', lang) } catch (error) { }
+          applyLanguage(lang);
+        });
+      });
+      let saved = null;
+      try {
+        const stored = localStorage.getItem('shooting-manual-language');
+        if (stored === 'zh' || stored === 'en') saved = stored;
+      } catch (error) { }
+      const browserLanguage = (navigator.languages?.[0] || navigator.language || '').toLowerCase();
+      const browserDefault = browserLanguage.startsWith('zh') ? 'zh' : 'en';
+      applyLanguage(saved || browserDefault);
+    })();
+  </script>
+
+
+</body>
+
+</html>
