@@ -10,4 +10,4 @@
 
 我也会用 AI 等工具帮助整理笔记、比较不同的想法，让内容更容易看懂。不过，篮球还是要回到球场上，一球一球地练。
 
-打开 [`index.html`](index.html) 就能阅读手册。
+打开 [`青少年投篮训练手册`](https://feifeifei85.github.io/youth-basketball-shooting-guide) 就能阅读手册。
