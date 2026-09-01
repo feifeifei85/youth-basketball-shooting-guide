@@ -10,4 +10,4 @@ I made this small manual to save what I have learned and share it with other you
 
 I also use tools such as AI to help organize notes, compare ideas, and make the manual easier to understand. Basketball still has to be learned on the court, one shot at a time.
 
-Open [`index.html`](index.html) to read the manual. 
+Open [`Youth Shooting Training Manual`](https://feifeifei85.github.io/youth-basketball-shooting-guide) to read the manual. 
