@@ -2662,7 +2662,7 @@
         left: auto;
         right: auto;
         top: auto;
-        max-width: 820px;
+        max-width: 960px;
         margin: 22px 0 38px;
         padding-left: clamp(18px, 3vw, 38px);
         border-left: 3px solid var(--orange);
@@ -2683,7 +2683,7 @@
         left: auto;
         right: auto;
         top: auto;
-        max-width: 820px;
+        max-width: 960px;
         margin: 22px 0 38px;
         padding-left: clamp(18px, 3vw, 38px);
         border-left: 3px solid var(--orange);
@@ -3538,9 +3538,13 @@
       }
 
       .manual-compare-copy h3 {
-        margin: 0 0 8px;
+        display: inline;
+        margin: 0;
         color: var(--navy);
-        font-size: 18px
+        font-size: 18px;
+        white-space: nowrap;
+        overflow-wrap: normal;
+        word-break: normal
       }
 
       .manual-compare-copy p {
@@ -3568,13 +3572,14 @@
       .manual-status-badge {
         width: 28px;
         height: 28px;
-        margin-bottom: 8px;
-        display: grid;
+        margin: 0 8px 8px 0;
+        display: inline-grid;
         place-items: center;
         border-radius: 8px;
         background: #e7f1eb;
         color: #2e7d52;
-        font-weight: 900
+        font-weight: 900;
+        vertical-align: middle
       }
 
       .is-negative .manual-status-badge {
